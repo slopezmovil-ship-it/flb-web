@@ -87,14 +87,14 @@ const es = {
         resultado: 'Bitácora digital que antes no existía, repuestos comprados a tiempo y mantenimiento preventivo en el momento correcto.',
       },
       {
-        titulo: 'Red que reconoce cada dispositivo',
-        resultado: 'Solo los equipos autorizados entran a la red, de forma automática.',
+        titulo: 'Expansión regional conectada · 3 países',
+        resultado: 'Oficinas en Costa Rica, Panamá y Guatemala operando como una sola red, con toda la infraestructura en la nube.',
       },
     ],
     otrosProyectosTitulo: 'Otros proyectos',
     otrosProyectos: [
-      'Renovación de servidores en Guatemala, Honduras, Nicaragua, Costa Rica y Panamá.',
-      'Oficinas interconectadas en Costa Rica, Panamá y Guatemala, con infraestructura en la nube.',
+      'Instalación de servidores en Guatemala, Honduras, Nicaragua, Costa Rica y Panamá.',
+      'Red que reconoce cada dispositivo y deja fuera a los no autorizados.',
       'Seguridad ocupacional digital en tablets (Costa Rica).',
       'Almacén externo conectado a la oficina central (Nicaragua).',
       'Ampliación de cableado estructurado con mayor ancho de banda (Panamá).',
@@ -152,7 +152,7 @@ const es = {
       'Microsoft 365', 'Azure', 'AWS', 'Entra ID / Active Directory', 'Intune',
       'Defender', 'Purview', 'Windows Server', 'Linux', 'Power Platform',
       'Power BI', 'VMware / Hyper-V', 'Servidores HPE y Dell',
-      'Almacenamiento Dell EMC', 'Cisco DNA', 'n8n', 'Claude', 'Gemini', 'Copilot',
+      'Almacenamiento Dell EMC', 'Veeam', 'Cisco', 'Fortinet', 'MikroTik', 'n8n', 'Claude', 'Gemini', 'Copilot',
     ],
   },
 

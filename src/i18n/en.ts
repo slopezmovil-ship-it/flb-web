@@ -87,14 +87,14 @@ const en = {
         resultado: 'A digital maintenance log that didn\'t exist before, spare parts bought on time and preventive maintenance at the right moment.',
       },
       {
-        titulo: 'A network that recognizes every device',
-        resultado: 'Only authorized devices can join the network, automatically.',
+        titulo: 'Connected regional expansion · 3 countries',
+        resultado: 'Offices in Costa Rica, Panama and Guatemala operating as a single network, with all infrastructure in the cloud.',
       },
     ],
     otrosProyectosTitulo: 'Other projects',
     otrosProyectos: [
-      'Server renewal in Guatemala, Honduras, Nicaragua, Costa Rica and Panama.',
-      'Offices interconnected in Costa Rica, Panama and Guatemala, with cloud infrastructure.',
+      'Server installation in Guatemala, Honduras, Nicaragua, Costa Rica and Panama.',
+      'A network that recognizes every device and keeps unauthorized ones out.',
       'Digital occupational safety on tablets (Costa Rica).',
       'Off-site warehouse connected to headquarters (Nicaragua).',
       'Structured cabling expansion with more bandwidth (Panama).',
@@ -152,7 +152,7 @@ const en = {
       'Microsoft 365', 'Azure', 'AWS', 'Entra ID / Active Directory', 'Intune',
       'Defender', 'Purview', 'Windows Server', 'Linux', 'Power Platform',
       'Power BI', 'VMware / Hyper-V', 'HPE and Dell servers',
-      'Dell EMC storage', 'Cisco DNA', 'n8n', 'Claude', 'Gemini', 'Copilot',
+      'Dell EMC storage', 'Veeam', 'Cisco', 'Fortinet', 'MikroTik', 'n8n', 'Claude', 'Gemini', 'Copilot',
     ],
   },
 

@@ -12,6 +12,38 @@ interface Props {
 }
 
 const { title, description = 'FLB Group — Intelligent. Connected. Secure.', lang = 'es' } = Astro.props;
+
+const SITE = 'https://flbcr.com';
+const urlEs = `${SITE}/`;
+const urlEn = `${SITE}/en/`;
+const canonical = lang === 'en' ? urlEn : urlEs;
+const ogImage = `${SITE}/og-image.jpg`;
+const ogLocale = lang === 'en' ? 'en_US' : 'es_CR';
+const ogLocaleAlt = lang === 'en' ? 'es_CR' : 'en_US';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'FLB Group',
+  legalName: 'FLB Services Group',
+  url: SITE,
+  logo: `${SITE}/brand/icon-512.png`,
+  image: ogImage,
+  slogan: 'Intelligent. Connected. Secure.',
+  description,
+  telephone: '+506 8991-7668',
+  email: 'steven.lopez@flbcr.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Heredia',
+    addressCountry: 'CR',
+  },
+  areaServed: ['Costa Rica', 'Guatemala', 'Honduras', 'Nicaragua', 'Panamá'].map((name) => ({
+    '@type': 'Country',
+    name,
+  })),
+  sameAs: ['https://www.linkedin.com/in/steven-l%C3%B3pez-755245247'],
+};
 ---
 
 <!doctype html>
@@ -19,15 +51,44 @@ const { title, description = 'FLB Group — Intelligent. Connected. Secure.', la
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#0B2A5B" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical e idiomas -->
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="es" href={urlEs} />
+    <link rel="alternate" hreflang="en" href={urlEn} />
+    <link rel="alternate" hreflang="x-default" href={urlEs} />
+    <link rel="sitemap" href="/sitemap.xml" />
+
+    <!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="FLB Group" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="FLB Group — Intelligent. Connected. Secure." />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={ogLocaleAlt} />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
 
     <!-- Favicons -->
     <link rel="icon" href="/brand/favicon.ico" sizes="any" />
     <link rel="icon" href="/brand/favicon-32.png" type="image/png" sizes="32x32" />
     <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
 
-    <title>{title}</title>
+    <!-- Datos estructurados -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body class="font-sans text-ink antialiased">
     <slot />

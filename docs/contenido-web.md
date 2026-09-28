@@ -1,5 +1,5 @@
 # FLB Group: contenido de la web (fuente única de textos)
-*Versión 4 · 28-sep-2026 · Estado: ✅ aprobado por Steven (28-sep-2026)*
+*Versión 5 · 28-sep-2026 · Estado: ✅ aprobado por Steven (28-sep-2026)*
 *Fuente: Brand Brief y Texto Maestro v2 del Proyecto. Ningún agente inventa, agrega ni cambia textos. Si falta algo, se pide aquí.*
 
 ## Reglas para quien construya el sitio
@@ -73,12 +73,12 @@ Cableado estructurado · Oficinas inteligentes · Análisis de datos · Sitio we
 2. **Sistema de mantenimiento industrial en tablets** · 5 países
    **Resultado:** bitácora digital que antes no existía, repuestos comprados a tiempo y mantenimiento preventivo en el momento correcto.
 
-3. **Red que reconoce cada dispositivo**
-   **Resultado:** solo los equipos autorizados entran a la red, de forma automática.
+3. **Expansión regional conectada** · 3 países
+   **Resultado:** oficinas en Costa Rica, Panamá y Guatemala operando como una sola red, con toda la infraestructura en la nube.
 
 **Otros proyectos**
-1. Renovación de servidores en Guatemala, Honduras, Nicaragua, Costa Rica y Panamá.
-2. Oficinas interconectadas en Costa Rica, Panamá y Guatemala, con infraestructura en la nube.
+1. Instalación de servidores en Guatemala, Honduras, Nicaragua, Costa Rica y Panamá.
+2. Red que reconoce cada dispositivo y deja fuera a los no autorizados.
 3. Seguridad ocupacional digital en tablets (Costa Rica).
 4. Almacén externo conectado a la oficina central (Nicaragua).
 5. Ampliación de cableado estructurado con mayor ancho de banda (Panamá).
@@ -104,7 +104,7 @@ Proyectos ejecutados en Costa Rica, Guatemala, Honduras, Nicaragua y Panamá. Ba
 - **Contrato 24/7:** operaciones críticas.
 
 ## 8. Tecnologías (franja de logos o texto)
-Microsoft 365 · Azure · AWS · Entra ID / Active Directory · Intune · Defender · Purview · Windows Server · Linux · Power Platform · Power BI · VMware / Hyper-V · Servidores HPE y Dell · Almacenamiento Dell EMC · Cisco DNA · n8n · Claude · Gemini · Copilot
+Microsoft 365 · Azure · AWS · Entra ID / Active Directory · Intune · Defender · Purview · Windows Server · Linux · Power Platform · Power BI · VMware / Hyper-V · Servidores HPE y Dell · Almacenamiento Dell EMC · Veeam · Cisco · Fortinet · MikroTik · n8n · Claude · Gemini · Copilot
 
 ## 9. Por qué FLB Group
 - **Servicio integral:** de la red a la automatización, coordinamos a los especialistas y respondemos por cada proyecto de principio a fin.
@@ -184,12 +184,12 @@ Structured cabling · Smart offices · Data analytics · Websites and digital pr
 2. **Industrial maintenance system on tablets** · 5 countries
    **Result:** a digital maintenance log that didn't exist before, spare parts bought on time and preventive maintenance at the right moment.
 
-3. **A network that recognizes every device**
-   **Result:** only authorized devices can join the network, automatically.
+3. **Connected regional expansion** · 3 countries
+   **Result:** offices in Costa Rica, Panama and Guatemala operating as a single network, with all infrastructure in the cloud.
 
 **Other projects**
-1. Server renewal in Guatemala, Honduras, Nicaragua, Costa Rica and Panama.
-2. Offices interconnected in Costa Rica, Panama and Guatemala, with cloud infrastructure.
+1. Server installation in Guatemala, Honduras, Nicaragua, Costa Rica and Panama.
+2. A network that recognizes every device and keeps unauthorized ones out.
 3. Digital occupational safety on tablets (Costa Rica).
 4. Off-site warehouse connected to headquarters (Nicaragua).
 5. Structured cabling expansion with more bandwidth (Panama).
@@ -214,7 +214,7 @@ Projects delivered in Costa Rica, Guatemala, Honduras, Nicaragua and Panama. Bas
 - **24/7 contract:** critical operations.
 
 ## 8. Technologies
-Microsoft 365 · Azure · AWS · Entra ID / Active Directory · Intune · Defender · Purview · Windows Server · Linux · Power Platform · Power BI · VMware / Hyper-V · HPE and Dell servers · Dell EMC storage · Cisco DNA · n8n · Claude · Gemini · Copilot
+Microsoft 365 · Azure · AWS · Entra ID / Active Directory · Intune · Defender · Purview · Windows Server · Linux · Power Platform · Power BI · VMware / Hyper-V · HPE and Dell servers · Dell EMC storage · Veeam · Cisco · Fortinet · MikroTik · n8n · Claude · Gemini · Copilot
 
 ## 9. Why FLB Group
 - **Full-service partner:** from the network to automation, we coordinate the specialists and answer for every project from start to finish.
