@@ -1,0 +1,77 @@
+---
+import { useT } from '../i18n/index';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const t = useT(lang);
+const alternateLang = lang === 'es' ? 'en' : 'es';
+const alternateHref = lang === 'es' ? '/en/' : '/';
+
+const navLinks = [
+  { label: t.menu.servicios, href: '#servicios' },
+  { label: t.menu.casos, href: '#casos' },
+  { label: t.menu.comoTrabajamos, href: '#como-trabajamos' },
+  { label: t.menu.contacto, href: '#contacto' },
+];
+---
+
+<footer class="bg-[#071E45] py-12 text-white/70 md:py-16">
+  <div class="mx-auto max-w-7xl px-4 lg:px-8">
+    <div class="grid gap-10 md:grid-cols-3 md:gap-8">
+      <!-- Brand column -->
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center gap-2">
+          <img
+            src="/brand/flb-simbolo-3d-256.webp"
+            alt="FLB Group"
+            width="36"
+            height="36"
+            class="h-9 w-9"
+            loading="lazy"
+          />
+          <span class="text-lg text-white">
+            <span class="font-bold">FLB</span><span class="font-medium"> Group</span>
+          </span>
+        </div>
+        <p class="text-sm text-white/50">{t.footer.razonSocial}</p>
+        <p class="text-sm font-medium uppercase tracking-[0.15em] text-green/80">{t.footer.eslogan}</p>
+      </div>
+
+      <!-- Nav links column -->
+      <div class="flex flex-col gap-3">
+        <p class="mb-1 text-sm font-semibold uppercase tracking-wider text-white/40">
+          {lang === 'es' ? 'Menú' : 'Menu'}
+        </p>
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="text-sm text-white/60 transition-colors hover:text-white"
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+
+      <!-- Language & legal column -->
+      <div class="flex flex-col gap-3">
+        <p class="mb-1 text-sm font-semibold uppercase tracking-wider text-white/40">
+          {lang === 'es' ? 'Idioma' : 'Language'}
+        </p>
+        <a
+          href={alternateHref}
+          class="inline-flex w-fit items-center gap-1 rounded-md border border-white/20 px-3 py-1.5 text-sm font-medium text-white/70 transition-colors hover:border-white/40 hover:text-white"
+        >
+          {lang === 'es' ? 'English' : 'Español'}
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="mt-10 border-t border-white/10 pt-6 text-center text-sm text-white/40">
+      {t.footer.marca} · {t.footer.razonSocial} · {t.footer.eslogan} · {t.footer.copyright}
+    </div>
+  </div>
+</footer>

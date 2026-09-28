@@ -179,6 +179,42 @@ const en = {
     ],
   },
 
+  // Contact
+  contacto: {
+    titulo: 'Let\'s talk about your operation',
+    texto: 'Tell us what you need and we\'ll get back to you with an initial assessment.',
+    whatsapp: '+506 8991-7668',
+    correo: 'steven.lopez@flbcr.com',
+    linkedin: 'linkedin.com/in/steven-lópez-755245247',
+    ubicacion: 'Heredia, Costa Rica · Serving Central America',
+    etiquetas: {
+      whatsapp: 'WhatsApp',
+      correo: 'Email',
+      linkedin: 'LinkedIn',
+      ubicacion: 'Location',
+    },
+    formulario: {
+      nombre: 'Name',
+      empresa: 'Company',
+      correo: 'Email',
+      telefono: 'Phone (optional)',
+      mensaje: 'How can we help?',
+      enviar: 'Send',
+      enviando: 'Sending…',
+    },
+    confirmacion: 'Thank you. We\'ll be in touch soon.',
+    error: 'There was a problem sending your message. Please reach out via WhatsApp.',
+    sinClave: 'The form is not available right now. Please contact us via WhatsApp.',
+  },
+
+  // Footer
+  footer: {
+    marca: 'FLB Group',
+    razonSocial: 'FLB Services Group',
+    eslogan: 'Intelligent. Connected. Secure.',
+    copyright: `© ${new Date().getFullYear()}`,
+  },
+
   // WhatsApp
   whatsapp: {
     ariaLabel: 'Chat on WhatsApp',
