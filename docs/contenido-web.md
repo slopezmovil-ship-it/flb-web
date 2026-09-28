@@ -1,5 +1,5 @@
 # FLB Group: contenido de la web (fuente única de textos)
-*Versión 4 · 28-sep-2026 · Estado: ⏳ pendiente de aprobación de Steven*
+*Versión 4 · 28-sep-2026 · Estado: ✅ aprobado por Steven (28-sep-2026)*
 *Fuente: Brand Brief y Texto Maestro v2 del Proyecto. Ningún agente inventa, agrega ni cambia textos. Si falta algo, se pide aquí.*
 
 ## Reglas para quien construya el sitio
@@ -89,7 +89,7 @@ Manufactura · Transporte y logística nacional e internacional · Agroindustria
 ## 5. Alcance regional
 **Título:** Alcance regional
 Proyectos ejecutados en Costa Rica, Guatemala, Honduras, Nicaragua y Panamá. Base de operaciones en Heredia, Costa Rica.
-*Nota de diseño: mapa simple de Centroamérica con los 5 países resaltados. Sin ciudades.*
+*Nota de diseño: los 5 países como tarjetas o chips con su nombre. Sin mapa, sin banderas, sin ciudades.*
 
 ## 6. Cómo trabajamos
 1. **Diagnóstico:** entendemos tu operación.
