@@ -127,10 +127,10 @@ const en = {
   comoTrabajamos: {
     titulo: 'How we work',
     pasos: [
-      { numero: '1', titulo: 'Assessment', descripcion: 'we understand your operation.' },
-      { numero: '2', titulo: 'Proposal', descripcion: 'clear scope, timeline and cost.' },
-      { numero: '3', titulo: 'Implementation', descripcion: 'execution, documentation and training.' },
-      { numero: '4', titulo: 'Ongoing support', descripcion: 'support and continuous improvement.' },
+      { numero: '1', titulo: 'Assessment', descripcion: 'We understand your operation.' },
+      { numero: '2', titulo: 'Proposal', descripcion: 'Clear scope, timeline and cost.' },
+      { numero: '3', titulo: 'Implementation', descripcion: 'Execution, documentation and training.' },
+      { numero: '4', titulo: 'Ongoing support', descripcion: 'Support and continuous improvement.' },
     ],
   },
 
@@ -162,19 +162,19 @@ const en = {
     items: [
       {
         titulo: 'Full-service partner',
-        descripcion: 'from the network to automation, we coordinate the specialists and answer for every project from start to finish.',
+        descripcion: 'From the network to automation, we coordinate the specialists and answer for every project from start to finish.',
       },
       {
         titulo: 'Proven regional capacity',
-        descripcion: 'projects delivered in 5 countries, remote and on-site.',
+        descripcion: 'Projects delivered in 5 countries, remote and on-site.',
       },
       {
         titulo: 'Real industrial experience',
-        descripcion: 'plants, maintenance and occupational safety, not just offices.',
+        descripcion: 'Plants, maintenance and occupational safety, not just offices.',
       },
       {
         titulo: '18 years in IT',
-        descripcion: 'serving clients in manufacturing, transportation, agribusiness, healthcare and engineering.',
+        descripcion: 'Serving clients in manufacturing, transportation, agribusiness, healthcare and engineering.',
       },
     ],
   },

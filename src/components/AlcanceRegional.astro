@@ -22,9 +22,9 @@ const t = useT(lang);
     </div>
 
     <!-- 5 tarjetas de países -->
-    <div class="flex flex-wrap items-center justify-center gap-4">
+    <div class="mx-auto grid max-w-4xl grid-cols-2 gap-3 md:grid-cols-5 md:gap-4 [&>*:last-child]:col-span-2 md:[&>*:last-child]:col-span-1">
       {t.alcance.paises.map((pais: string) => (
-        <div class="alcance-card flex items-center justify-center rounded-xl border border-navy/10 bg-white px-8 py-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-shadow duration-300 hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
+        <div class="alcance-card flex items-center justify-center rounded-xl border border-navy/10 bg-white px-4 py-4 md:py-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-shadow duration-300 hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
           {/* Ícono de pin de ubicación */}
           <svg
             class="mr-3 h-5 w-5 shrink-0 text-teal"

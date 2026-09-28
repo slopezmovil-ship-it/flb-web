@@ -127,10 +127,10 @@ const es = {
   comoTrabajamos: {
     titulo: 'Cómo trabajamos',
     pasos: [
-      { numero: '1', titulo: 'Diagnóstico', descripcion: 'entendemos tu operación.' },
-      { numero: '2', titulo: 'Propuesta', descripcion: 'alcance, tiempos y costo claros.' },
-      { numero: '3', titulo: 'Implementación', descripcion: 'ejecución, documentación y capacitación.' },
-      { numero: '4', titulo: 'Acompañamiento', descripcion: 'soporte y mejora continua.' },
+      { numero: '1', titulo: 'Diagnóstico', descripcion: 'Entendemos tu operación.' },
+      { numero: '2', titulo: 'Propuesta', descripcion: 'Alcance, tiempos y costo claros.' },
+      { numero: '3', titulo: 'Implementación', descripcion: 'Ejecución, documentación y capacitación.' },
+      { numero: '4', titulo: 'Acompañamiento', descripcion: 'Soporte y mejora continua.' },
     ],
   },
 
@@ -162,19 +162,19 @@ const es = {
     items: [
       {
         titulo: 'Servicio integral',
-        descripcion: 'de la red a la automatización, coordinamos a los especialistas y respondemos por cada proyecto de principio a fin.',
+        descripcion: 'De la red a la automatización, coordinamos a los especialistas y respondemos por cada proyecto de principio a fin.',
       },
       {
         titulo: 'Capacidad regional probada',
-        descripcion: 'proyectos ejecutados en 5 países, remoto y en sitio.',
+        descripcion: 'Proyectos ejecutados en 5 países, remoto y en sitio.',
       },
       {
         titulo: 'Experiencia industrial real',
-        descripcion: 'planta, mantenimiento y seguridad ocupacional, no solo oficinas.',
+        descripcion: 'Planta, mantenimiento y seguridad ocupacional, no solo oficinas.',
       },
       {
         titulo: '18 años en TI',
-        descripcion: 'con clientes de manufactura, transporte, agroindustria, sector médico e ingeniería.',
+        descripcion: 'Con clientes de manufactura, transporte, agroindustria, sector médico e ingeniería.',
       },
     ],
   },
