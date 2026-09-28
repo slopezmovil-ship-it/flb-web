@@ -1,0 +1,53 @@
+---
+import { useT } from '../i18n/index';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const t = useT(lang);
+---
+
+<section id="tecnologias" class="bg-navy py-16 md:py-20">
+  <div class="mx-auto max-w-7xl px-4 lg:px-8">
+    <!-- Título centrado -->
+    <div class="mb-8 text-center md:mb-10">
+      <h2 class="text-2xl font-bold text-white md:text-3xl">
+        {t.tecnologias.titulo}
+      </h2>
+    </div>
+
+    <!-- Chips de texto gris discretos -->
+    <div class="flex flex-wrap items-center justify-center gap-3">
+      {t.tecnologias.items.map((tech: string, i: number) => (
+        <span
+          class="tech-chip inline-block rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white/80 transition-colors duration-200 hover:bg-white/20 hover:text-white"
+          style={`animation-delay: ${i * 0.03}s`}
+        >
+          {tech}
+        </span>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .tech-chip {
+    opacity: 0;
+    animation: chipReveal 0.3s ease-out forwards;
+  }
+
+  @keyframes chipReveal {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tech-chip {
+      opacity: 1;
+      animation: none;
+    }
+  }
+</style>

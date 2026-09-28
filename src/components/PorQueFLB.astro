@@ -1,0 +1,94 @@
+---
+import { useT } from '../i18n/index';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const t = useT(lang);
+---
+
+<section id="por-que-flb" class="bg-white py-20 md:py-28">
+  <div class="mx-auto max-w-7xl px-4 lg:px-8">
+    <!-- Título centrado -->
+    <div class="mb-12 text-center md:mb-16">
+      <h2 class="text-3xl font-bold text-navy md:text-4xl">
+        {t.porQueFLB.titulo}
+      </h2>
+    </div>
+
+    <!-- 4 bloques con ícono de línea -->
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      {t.porQueFLB.items.map((item: { titulo: string; descripcion: string }, i: number) => (
+        <div class="porque-block text-center" style={`animation-delay: ${i * 0.1}s`}>
+          {/* Íconos de línea (Lucide style) */}
+          {i === 0 && (
+            <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-navy/5">
+              <svg class="h-7 w-7 text-navy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20" />
+                <path d="M2 12h20" />
+              </svg>
+            </div>
+          )}
+          {i === 1 && (
+            <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-navy/5">
+              <svg class="h-7 w-7 text-navy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+          )}
+          {i === 2 && (
+            <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-navy/5">
+              <svg class="h-7 w-7 text-navy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 20a2 2 0 002 2h16a2 2 0 002-2V8l-7-6H4a2 2 0 00-2 2v16z" />
+                <path d="M14 2v6h6" />
+                <path d="M12 18v-6" />
+                <path d="M9 15l3-3 3 3" />
+              </svg>
+            </div>
+          )}
+          {i === 3 && (
+            <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-navy/5">
+              <svg class="h-7 w-7 text-navy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+          )}
+          <h3 class="text-lg font-bold text-navy">{item.titulo}</h3>
+          <p class="mt-2 text-sm text-gray md:text-base">{item.descripcion}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .porque-block {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: porqueReveal 0.4s ease-out forwards;
+  }
+
+  .porque-block:nth-child(2) { animation-delay: 0.1s; }
+  .porque-block:nth-child(3) { animation-delay: 0.2s; }
+  .porque-block:nth-child(4) { animation-delay: 0.3s; }
+
+  @keyframes porqueReveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .porque-block {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  }
+</style>

@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colores de marca — docs/marca.md */
+  --color-navy: #0B2A5B;
+  --color-green: #3AA57A;
+  --color-green-700: #2A7F5B;
+  --color-orange: #C0652B;
+  --color-orange-700: #A34F1C;
+  --color-teal: #1A9A92;
+  --color-teal-700: #157A74;
+  --color-gray: #6B7280;
+  --color-ink: #0F172A;
+  --color-mist: #F3F6FA;
+  --color-white: #FFFFFF;
+
+  /* Tipografía */
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}

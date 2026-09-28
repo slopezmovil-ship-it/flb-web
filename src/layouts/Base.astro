@@ -1,0 +1,35 @@
+---
+import '@fontsource/montserrat/400.css';
+import '@fontsource/montserrat/500.css';
+import '@fontsource/montserrat/600.css';
+import '@fontsource/montserrat/700.css';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  lang?: string;
+}
+
+const { title, description = 'FLB Group — Intelligent. Connected. Secure.', lang = 'es' } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0B2A5B" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/brand/favicon.ico" sizes="any" />
+    <link rel="icon" href="/brand/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
+
+    <title>{title}</title>
+  </head>
+  <body class="font-sans text-ink antialiased">
+    <slot />
+  </body>
+</html>

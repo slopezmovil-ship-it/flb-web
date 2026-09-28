@@ -1,0 +1,104 @@
+---
+import { useT } from '../i18n/index';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const t = useT(lang);
+---
+
+<section id="casos" class="bg-mist py-20 md:py-28">
+  <div class="mx-auto max-w-7xl px-4 lg:px-8">
+    <!-- Título + intro centrados -->
+    <div class="mb-14 text-center md:mb-20">
+      <h2 class="mb-4 text-3xl font-bold text-navy md:text-4xl">
+        {t.casos.titulo}
+      </h2>
+      <p class="mx-auto max-w-2xl text-base text-gray md:text-lg">
+        {t.casos.intro}
+      </p>
+    </div>
+
+    <!-- 3 tarjetas destacadas -->
+    <div class="grid gap-8 md:grid-cols-3">
+      {t.casos.destacados.map((caso: { titulo: string; resultado: string }) => (
+        <div class="casos-card flex flex-col overflow-hidden rounded-xl bg-white shadow-[0_1px_3px_rgba(0,0,0,0.08),0_4px_12px_rgba(0,0,0,0.04)] transition-shadow duration-300 hover:shadow-[0_4px_12px_rgba(0,0,0,0.1),0_8px_24px_rgba(0,0,0,0.06)]">
+          <div class="flex flex-1 flex-col px-6 pt-6 pb-8">
+            {/* Título del caso */}
+            <h3 class="mb-4 text-lg font-bold text-navy">
+              {caso.titulo}
+            </h3>
+
+            {/* Resultado con ícono de check verde */}
+            <div class="mt-auto flex items-start gap-2.5">
+              <svg
+                class="mt-0.5 h-5 w-5 shrink-0 text-green"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 13l4 4L19 7" />
+              </svg>
+              <p class="text-sm font-semibold text-ink">
+                {caso.resultado}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Otros proyectos -->
+    <div class="mt-12 md:mt-16">
+      <h3 class="mb-6 text-center text-xl font-semibold text-navy">
+        {t.casos.otrosProyectosTitulo}
+      </h3>
+      <ol class="mx-auto max-w-3xl columns-1 gap-x-12 space-y-3 md:columns-2">
+        {t.casos.otrosProyectos.map((proyecto: string, i: number) => (
+          <li class="break-inside-avoid text-sm text-ink">
+            <span class="mr-2 font-semibold text-navy">{i + 1}.</span>
+            {proyecto}
+          </li>
+        ))}
+      </ol>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Animación sutil de aparición al scroll */
+  .casos-card {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: casosReveal 0.5s ease-out forwards;
+  }
+
+  .casos-card:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .casos-card:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  @keyframes casosReveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .casos-card {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  }
+</style>

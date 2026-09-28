@@ -1,0 +1,177 @@
+---
+import { useT } from '../i18n/index';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const t = useT(lang);
+
+/* Mapa de colores por pilar para la barra superior, checks e ícono */
+const pilarColors: Record<string, {
+  bar: string;
+  check: string;
+  icon: string;
+  iconBg: string;
+}> = {
+  INTELLIGENT: {
+    bar: 'bg-orange',
+    check: 'text-orange-700',
+    icon: 'text-orange',
+    iconBg: 'bg-orange/10',
+  },
+  CONNECTED: {
+    bar: 'bg-green',
+    check: 'text-green-700',
+    icon: 'text-green',
+    iconBg: 'bg-green/10',
+  },
+  SECURE: {
+    bar: 'bg-teal',
+    check: 'text-teal-700',
+    icon: 'text-teal',
+    iconBg: 'bg-teal/10',
+  },
+};
+
+/* SVG paths de íconos por pilar (Lucide-style) */
+const pilarIcons: Record<string, string> = {
+  INTELLIGENT: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
+  CONNECTED: 'M5 12h14M12 5l7 7-7 7M3.055 11H5M3.055 13H5M19 11h1.945M19 13h1.945M12 3v2M12 19v2',
+  SECURE: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
+};
+---
+
+<section id="servicios" class="bg-white py-20 md:py-28">
+  <div class="mx-auto max-w-7xl px-4 lg:px-8">
+    <!-- Título + intro centrados -->
+    <div class="mb-14 text-center md:mb-20">
+      <h2 class="mb-4 text-3xl font-bold text-navy md:text-4xl">
+        {t.servicios.titulo}
+      </h2>
+      <p class="mx-auto max-w-2xl text-base text-gray md:text-lg">
+        {t.servicios.intro}
+      </p>
+    </div>
+
+    <!-- 3 tarjetas de pilares -->
+    <div class="grid gap-8 md:grid-cols-3">
+      {t.servicios.pilares.map((pilar: { nombre: string; subtitulo: string; frase: string; items: string[] }) => {
+        const colors = pilarColors[pilar.nombre];
+        const iconPath = pilarIcons[pilar.nombre];
+        return (
+          <div class="servicios-card group flex flex-col overflow-hidden rounded-xl bg-white shadow-[0_1px_3px_rgba(0,0,0,0.08),0_4px_12px_rgba(0,0,0,0.04)] transition-shadow duration-300 hover:shadow-[0_4px_12px_rgba(0,0,0,0.1),0_8px_24px_rgba(0,0,0,0.06)]">
+            {/* Barra superior de color */}
+            <div class:list={['h-1.5', colors.bar]} />
+
+            <div class="flex flex-1 flex-col px-6 pt-6 pb-8">
+              {/* Ícono */}
+              <div class:list={['mb-5 flex h-12 w-12 items-center justify-center rounded-lg', colors.iconBg]}>
+                <svg
+                  class:list={['h-6 w-6', colors.icon]}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d={iconPath} />
+                </svg>
+              </div>
+
+              {/* Nombre del pilar */}
+              <h3 class="mb-1 text-sm font-medium uppercase tracking-[0.15em] text-navy">
+                {pilar.nombre}
+              </h3>
+
+              {/* Subtítulo (texto después del ·) */}
+              <p class="mb-3 text-sm text-gray">
+                {pilar.subtitulo}
+              </p>
+
+              {/* Frase en cursiva */}
+              <p class="mb-6 text-sm italic text-ink/70">
+                {pilar.frase}
+              </p>
+
+              {/* Lista de servicios */}
+              <ul class="mt-auto flex flex-col gap-2.5">
+                {pilar.items.map((item: string) => (
+                  <li class="flex items-start gap-2.5 text-sm text-ink">
+                    <svg
+                      class:list={['mt-0.5 h-4 w-4 shrink-0', colors.check]}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+
+    <!-- Complementarios: franja mist -->
+    <div class="mt-12 rounded-xl bg-mist px-6 py-8 md:mt-16 md:px-10 md:py-10">
+      <h3 class="mb-5 text-center text-lg font-semibold text-navy md:text-xl">
+        {t.servicios.complementarios.titulo}
+      </h3>
+
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        {t.servicios.complementarios.items.map((item: string) => (
+          <span class="inline-flex items-center rounded-full border border-navy/10 bg-white px-4 py-2 text-sm font-medium text-navy shadow-sm">
+            {item}
+          </span>
+        ))}
+      </div>
+
+      <p class="mt-5 text-center text-sm italic text-gray">
+        {t.servicios.complementarios.nota}
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Animación sutil de aparición al scroll */
+  .servicios-card {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: serviciosReveal 0.5s ease-out forwards;
+  }
+
+  .servicios-card:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .servicios-card:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  @keyframes serviciosReveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .servicios-card {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  }
+</style>

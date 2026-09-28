@@ -1,0 +1,62 @@
+---
+import { useT } from '../i18n/index';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const t = useT(lang);
+
+const idealLabel = lang === 'es' ? 'Ideal para' : 'Ideal for';
+---
+
+<section id="modalidades" class="bg-mist py-20 md:py-28">
+  <div class="mx-auto max-w-7xl px-4 lg:px-8">
+    <!-- Título centrado -->
+    <div class="mb-10 text-center md:mb-14">
+      <h2 class="text-3xl font-bold text-navy md:text-4xl">
+        {t.modalidades.titulo}
+      </h2>
+    </div>
+
+    <!-- 4 tarjetas pequeñas -->
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {t.modalidades.items.map((item: { nombre: string; ideal: string }, i: number) => (
+        <div class="modalidad-card rounded-xl border border-navy/10 bg-white px-6 py-6 shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-shadow duration-300 hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)]" style={`animation-delay: ${i * 0.08}s`}>
+          <h3 class="text-lg font-bold text-navy">{item.nombre}</h3>
+          <p class="mt-2 text-sm text-gray">
+            <span class="font-semibold text-ink">{idealLabel}:</span> {item.ideal}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .modalidad-card {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: modalidadReveal 0.4s ease-out forwards;
+  }
+
+  .modalidad-card:nth-child(2) { animation-delay: 0.08s; }
+  .modalidad-card:nth-child(3) { animation-delay: 0.16s; }
+  .modalidad-card:nth-child(4) { animation-delay: 0.24s; }
+
+  @keyframes modalidadReveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .modalidad-card {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  }
+</style>

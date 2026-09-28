@@ -1,0 +1,33 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import Servicios from '../../components/Servicios.astro';
+import Casos from '../../components/Casos.astro';
+import Industrias from '../../components/Industrias.astro';
+import AlcanceRegional from '../../components/AlcanceRegional.astro';
+import ComoTrabajamos from '../../components/ComoTrabajamos.astro';
+import Modalidades from '../../components/Modalidades.astro';
+import Tecnologias from '../../components/Tecnologias.astro';
+import PorQueFLB from '../../components/PorQueFLB.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import { useT } from '../../i18n/index';
+
+const lang = 'en';
+const t = useT(lang);
+---
+
+<Base title={t.seo.title} description={t.seo.description} lang={lang}>
+  <Header lang={lang} />
+  <Hero lang={lang} />
+  <Servicios lang={lang} />
+  <Casos lang={lang} />
+  <Industrias lang={lang} />
+  <AlcanceRegional lang={lang} />
+  <ComoTrabajamos lang={lang} />
+  <Modalidades lang={lang} />
+  <Tecnologias lang={lang} />
+  <PorQueFLB lang={lang} />
+  <WhatsAppButton lang={lang} />
+</Base>
+

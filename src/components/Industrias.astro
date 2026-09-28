@@ -1,0 +1,61 @@
+---
+import { useT } from '../i18n/index';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const t = useT(lang);
+---
+
+<section id="industrias" class="bg-white py-20 md:py-28">
+  <div class="mx-auto max-w-7xl px-4 lg:px-8">
+    <!-- Título centrado -->
+    <div class="mb-10 text-center md:mb-14">
+      <h2 class="text-3xl font-bold text-navy md:text-4xl">
+        {t.industrias.titulo}
+      </h2>
+    </div>
+
+    <!-- Chips de industrias -->
+    <div class="flex flex-wrap items-center justify-center gap-3">
+      {t.industrias.items.map((item: string) => (
+        <span class="industrias-chip inline-flex items-center rounded-full border border-navy/15 bg-white px-5 py-2.5 text-sm font-medium text-navy shadow-sm transition-colors duration-200 hover:bg-navy hover:text-white">
+          {item}
+        </span>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .industrias-chip {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: industriasReveal 0.4s ease-out forwards;
+  }
+
+  .industrias-chip:nth-child(2) { animation-delay: 0.05s; }
+  .industrias-chip:nth-child(3) { animation-delay: 0.1s; }
+  .industrias-chip:nth-child(4) { animation-delay: 0.15s; }
+  .industrias-chip:nth-child(5) { animation-delay: 0.2s; }
+  .industrias-chip:nth-child(6) { animation-delay: 0.25s; }
+  .industrias-chip:nth-child(7) { animation-delay: 0.3s; }
+  .industrias-chip:nth-child(8) { animation-delay: 0.35s; }
+
+  @keyframes industriasReveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .industrias-chip {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  }
+</style>

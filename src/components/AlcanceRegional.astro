@@ -1,0 +1,75 @@
+---
+import { useT } from '../i18n/index';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const t = useT(lang);
+---
+
+<section id="alcance" class="bg-mist py-20 md:py-28">
+  <div class="mx-auto max-w-7xl px-4 lg:px-8">
+    <!-- Título + texto centrados -->
+    <div class="mb-10 text-center md:mb-14">
+      <h2 class="mb-4 text-3xl font-bold text-navy md:text-4xl">
+        {t.alcance.titulo}
+      </h2>
+      <p class="mx-auto max-w-2xl text-base text-gray md:text-lg">
+        {t.alcance.texto}
+      </p>
+    </div>
+
+    <!-- 5 tarjetas de países -->
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      {t.alcance.paises.map((pais: string) => (
+        <div class="alcance-card flex items-center justify-center rounded-xl border border-navy/10 bg-white px-8 py-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-shadow duration-300 hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
+          {/* Ícono de pin de ubicación */}
+          <svg
+            class="mr-3 h-5 w-5 shrink-0 text-teal"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <span class="text-base font-semibold text-navy">{pais}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .alcance-card {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: alcanceReveal 0.4s ease-out forwards;
+  }
+
+  .alcance-card:nth-child(2) { animation-delay: 0.08s; }
+  .alcance-card:nth-child(3) { animation-delay: 0.16s; }
+  .alcance-card:nth-child(4) { animation-delay: 0.24s; }
+  .alcance-card:nth-child(5) { animation-delay: 0.32s; }
+
+  @keyframes alcanceReveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .alcance-card {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  }
+</style>
