@@ -104,6 +104,10 @@ const linkedinUrl = 'https://www.linkedin.com/in/steven-l%C3%B3pez-755245247';
           >
             {/* Web3Forms access key */}
             <input type="hidden" name="access_key" value={web3formsKey} />
+            {/* Subject line for email notifications */}
+            <input type="hidden" name="subject" value={lang === 'es' ? 'Nuevo contacto desde flbcr.com (ES)' : 'Nuevo contacto desde flbcr.com (EN)'} />
+            {/* Sender name in email notifications */}
+            <input type="hidden" name="from_name" value="Web FLB Group" />
             {/* Honeypot */}
             <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
 

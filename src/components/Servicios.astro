@@ -56,7 +56,7 @@ const pilarIcons: Record<string, string> = {
     </div>
 
     <!-- 3 tarjetas de pilares -->
-    <div class="grid gap-8 md:grid-cols-3">
+    <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
       {t.servicios.pilares.map((pilar: { nombre: string; subtitulo: string; frase: string; items: string[] }) => {
         const colors = pilarColors[pilar.nombre];
         const iconPath = pilarIcons[pilar.nombre];
@@ -88,19 +88,19 @@ const pilarIcons: Record<string, string> = {
               </h3>
 
               {/* Subtítulo (texto después del ·) */}
-              <p class="mb-3 text-sm text-gray">
+              <p class="mb-3 text-base text-gray">
                 {pilar.subtitulo}
               </p>
 
               {/* Frase en cursiva */}
-              <p class="mb-6 text-sm italic text-ink/70">
+              <p class="mb-6 text-base italic text-ink/70">
                 {pilar.frase}
               </p>
 
               {/* Lista de servicios */}
               <ul class="mt-auto flex flex-col gap-2.5">
                 {pilar.items.map((item: string) => (
-                  <li class="flex items-start gap-2.5 text-sm text-ink">
+                  <li class="flex items-start gap-2.5 text-base text-ink">
                     <svg
                       class:list={['mt-0.5 h-4 w-4 shrink-0', colors.check]}
                       viewBox="0 0 24 24"

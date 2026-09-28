@@ -21,11 +21,11 @@ const idealLabel = lang === 'es' ? 'Ideal para' : 'Ideal for';
     </div>
 
     <!-- 4 tarjetas pequeñas -->
-    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="mx-auto grid max-w-6xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
       {t.modalidades.items.map((item: { nombre: string; ideal: string }, i: number) => (
         <div class="modalidad-card rounded-xl border border-navy/10 bg-white px-6 py-6 shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-shadow duration-300 hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)]" style={`animation-delay: ${i * 0.08}s`}>
           <h3 class="text-lg font-bold text-navy">{item.nombre}</h3>
-          <p class="mt-2 text-sm text-gray">
+          <p class="mt-2 text-base text-gray">
             <span class="font-semibold text-ink">{idealLabel}:</span> {item.ideal}
           </p>
         </div>

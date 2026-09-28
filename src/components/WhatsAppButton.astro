@@ -14,7 +14,7 @@ const t = useT(lang);
   target="_blank"
   rel="noopener noreferrer"
   aria-label={t.whatsapp.ariaLabel}
-  class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl"
+  class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl"
   id="whatsapp-float"
 >
   <svg class="h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -23,10 +23,45 @@ const t = useT(lang);
 </a>
 
 <style>
-  /* Hide WhatsApp button when near the footer to avoid overlap */
+  /* Smooth hide/show transition */
+  #whatsapp-float {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  #whatsapp-float.wa-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+  }
+
   @media (prefers-reduced-motion: reduce) {
     #whatsapp-float {
       transition: none;
     }
   }
 </style>
+
+<script>
+  // Hide the floating WhatsApp button when #contacto is visible on screen
+  const waBtn = document.getElementById('whatsapp-float');
+  const contactSection = document.getElementById('contacto');
+
+  if (waBtn && contactSection) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            waBtn.classList.add('wa-hidden');
+          } else {
+            waBtn.classList.remove('wa-hidden');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(contactSection);
+  }
+</script>
