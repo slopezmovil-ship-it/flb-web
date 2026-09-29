@@ -13,10 +13,11 @@ const es = {
     titulo: 'Conectamos tu operación, la protegemos y la hacemos más eficiente.',
     subtitulo: 'Tecnología, automatización e inteligencia artificial para empresas en Centroamérica.',
     botonPrincipal: 'Hablemos por WhatsApp',
-    botonSecundario: 'Ver servicios',
+    botonSecundario: 'Solicitar diagnóstico',
     datos: [
       '5 países con proyectos ejecutados',
       '18 años en TI',
+      '7 industrias atendidas',
       'Remoto y en sitio',
     ],
   },
@@ -224,6 +225,40 @@ const es = {
   seo: {
     title: 'FLB Group | Tecnología, automatización e IA para empresas en Centroamérica',
     description: 'Redes, servidores, nube, ciberseguridad e inteligencia artificial para empresas en Costa Rica y Centroamérica. Proyectos en 5 países y 18 años de experiencia.',
+  },
+  // ===== v2: enfoque en el cliente =====
+  soluciones: {
+    titulo: '¿Qué necesita tu operación?',
+    intro: 'Cuéntanos el problema. Nosotros ponemos la solución.',
+    items: [
+      { pilar: 'INTELLIGENT', problema: 'Tu equipo pierde horas en tareas repetitivas', solucion: 'Automatizamos facturación, reportes y consultas, con IA donde suma.', servicios: ['Automatización de procesos', 'IA aplicada', 'Asistentes de atención'] },
+      { pilar: 'INTELLIGENT', problema: 'Decides sin datos claros', solucion: 'Tableros con tus indicadores y sistemas a la medida de tu operación.', servicios: ['Tableros de decisión', 'Aplicaciones a la medida'] },
+      { pilar: 'CONNECTED', problema: 'Tu infraestructura se cae y todo se detiene', solucion: 'Redes, servidores y equipos estables en oficinas, plantas y bodegas de varios países.', servicios: ['Redes multisede', 'Servidores y virtualización', 'Cableado estructurado'] },
+      { pilar: 'CONNECTED', problema: 'No tienes quién atienda tu tecnología', solucion: 'Soporte remoto y en sitio, nube y Microsoft 365, por horas o por contrato.', servicios: ['Mesa de ayuda', 'Nube y Microsoft 365'] },
+      { pilar: 'SECURE', problema: 'No sabes si tu información está protegida', solucion: 'Seguridad de red, respaldos y recuperación ante desastres.', servicios: ['Seguridad de red', 'Respaldo y recuperación'] },
+      { pilar: 'SECURE', problema: 'Tu planta o tus instalaciones necesitan control', solucion: 'Seguridad industrial digital, videovigilancia y control de acceso.', servicios: ['Seguridad industrial', 'Videovigilancia', 'Control de acceso'] },
+    ],
+    tambienTitulo: 'También:',
+    tambien: ['Oficinas inteligentes', 'Análisis de datos', 'Sitio web y presencia digital'],
+  },
+  paraQuien: {
+    titulo: 'Para quién trabajamos',
+    perfiles: [
+      { titulo: 'PyMEs y oficinas', texto: 'Tu departamento de TI externo: soporte, Microsoft 365, respaldos y seguridad.' },
+      { titulo: 'Industria y manufactura', texto: 'Redes de planta, sistemas de mantenimiento y seguridad industrial, en uno o varios países.' },
+      { titulo: 'Constructoras y edificios', texto: 'Entregamos el edificio conectado, seguro y listo para operar.' },
+    ],
+    industrias: 'Experiencia en manufactura, transporte y logística, agroindustria, sector médico, ingeniería y metalurgia, minería, construcción y estaciones de servicio.',
+  },
+  modalidadesLinea: { titulo: 'Modalidades:', items: ['Por hora', 'Por proyecto', 'Contrato 8x5', 'Contrato 24/7'] },
+  cta: {
+    titulo: '¿Cuál es el reto de tu operación hoy?',
+    texto: 'Agenda un diagnóstico inicial sin costo y te decimos por dónde empezar.',
+    boton: 'Hablemos por WhatsApp',
+  },
+  trabajamosCon: {
+    titulo: 'Trabajamos con',
+    items: ['Microsoft 365', 'Azure', 'AWS', 'Cisco', 'Fortinet', 'MikroTik', 'Dell', 'HPE', 'VMware', 'Veeam', 'Power Platform', 'Linux'],
   },
 } as const;
 

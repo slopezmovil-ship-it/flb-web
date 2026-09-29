@@ -1,0 +1,58 @@
+---
+import { useT } from '../i18n/index';
+
+interface Props { lang: string; }
+const { lang } = Astro.props;
+const t = useT(lang);
+
+const colores: Record<string, { bar: string; text: string; bg: string; chip: string }> = {
+  INTELLIGENT: { bar: 'bg-orange', text: 'text-orange-700', bg: 'bg-orange/10', chip: 'border-orange/25 text-orange-700' },
+  CONNECTED: { bar: 'bg-green', text: 'text-green-700', bg: 'bg-green/10', chip: 'border-green/30 text-green-700' },
+  SECURE: { bar: 'bg-teal', text: 'text-teal-700', bg: 'bg-teal/10', chip: 'border-teal/30 text-teal-700' },
+};
+const iconos: Record<string, string> = {
+  INTELLIGENT: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
+  CONNECTED: 'M5 12h14M12 5l7 7-7 7',
+  SECURE: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
+};
+---
+
+<section id="servicios" class="bg-white py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-4 lg:px-8">
+    <div class="mb-12 text-center md:mb-16">
+      <h2 class="mb-4 text-3xl font-bold text-navy md:text-4xl">{t.soluciones.titulo}</h2>
+      <p class="mx-auto max-w-2xl text-base text-gray md:text-lg">{t.soluciones.intro}</p>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {t.soluciones.items.map((item) => {
+        const c = colores[item.pilar];
+        return (
+          <article class="flex flex-col overflow-hidden rounded-xl bg-white shadow-[0_1px_3px_rgba(0,0,0,0.08),0_4px_12px_rgba(0,0,0,0.04)] transition-shadow duration-300 hover:shadow-[0_4px_12px_rgba(0,0,0,0.1),0_8px_24px_rgba(0,0,0,0.06)]">
+            <div class:list={['h-1.5', c.bar]} />
+            <div class="flex flex-1 flex-col p-6">
+              <div class="mb-4 flex items-center gap-3">
+                <span class:list={['flex h-10 w-10 shrink-0 items-center justify-center rounded-lg', c.bg]}>
+                  <svg class:list={['h-5 w-5', c.text]} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={iconos[item.pilar]} /></svg>
+                </span>
+                <span class:list={['text-xs font-semibold uppercase tracking-[0.15em]', c.text]}>{item.pilar}</span>
+              </div>
+              <h3 class="mb-2 text-lg font-bold leading-snug text-navy md:text-xl">{item.problema}</h3>
+              <p class="mb-5 text-base text-ink/80">{item.solucion}</p>
+              <ul class="mt-auto flex flex-wrap gap-2" aria-label={lang === 'es' ? 'Servicios' : 'Services'}>
+                {item.servicios.map((s) => (
+                  <li class:list={['rounded-full border bg-white px-3 py-1 text-sm font-medium', c.chip]}>{s}</li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+
+    <p class="mt-10 text-center text-base text-gray">
+      <span class="font-semibold text-navy">{t.soluciones.tambienTitulo}</span>
+      {' '}{t.soluciones.tambien.join(' · ')}
+    </p>
+  </div>
+</section>

@@ -13,10 +13,11 @@ const en = {
     titulo: 'We connect your operation, protect it and make it more efficient.',
     subtitulo: 'Technology, automation and artificial intelligence for businesses in Central America.',
     botonPrincipal: 'Chat on WhatsApp',
-    botonSecundario: 'See services',
+    botonSecundario: 'Request an assessment',
     datos: [
       'Projects in 5 countries',
       '18 years in IT',
+      '7 industries served',
       'Remote and on-site',
     ],
   },
@@ -224,6 +225,40 @@ const en = {
   seo: {
     title: 'FLB Group | Technology, automation and AI for businesses in Central America',
     description: 'Networks, servers, cloud, cybersecurity and artificial intelligence for businesses in Costa Rica and Central America. Projects in 5 countries and 18 years of experience.',
+  },
+  // ===== v2: client-focused =====
+  soluciones: {
+    titulo: 'What does your operation need?',
+    intro: 'Tell us the problem. We bring the solution.',
+    items: [
+      { pilar: 'INTELLIGENT', problema: 'Your team loses hours on repetitive tasks', solucion: 'We automate invoicing, reports and lookups, with AI where it adds value.', servicios: ['Process automation', 'Applied AI', 'Service assistants'] },
+      { pilar: 'INTELLIGENT', problema: 'You make decisions without clear data', solucion: 'Dashboards with your key metrics and systems built for your operation.', servicios: ['Decision dashboards', 'Custom applications'] },
+      { pilar: 'CONNECTED', problema: 'Your infrastructure goes down and everything stops', solucion: 'Stable networks, servers and devices across offices, plants and warehouses in several countries.', servicios: ['Multi-site networks', 'Servers and virtualization', 'Structured cabling'] },
+      { pilar: 'CONNECTED', problema: 'No one is taking care of your technology', solucion: 'Remote and on-site support, cloud and Microsoft 365, hourly or under contract.', servicios: ['Help desk', 'Cloud and Microsoft 365'] },
+      { pilar: 'SECURE', problema: "You're not sure your information is protected", solucion: 'Network security, backups and disaster recovery.', servicios: ['Network security', 'Backup and recovery'] },
+      { pilar: 'SECURE', problema: 'Your plant or facilities need control', solucion: 'Digital industrial safety, video surveillance and access control.', servicios: ['Industrial safety', 'Video surveillance', 'Access control'] },
+    ],
+    tambienTitulo: 'Also:',
+    tambien: ['Smart offices', 'Data analytics', 'Websites and digital presence'],
+  },
+  paraQuien: {
+    titulo: 'Who we work with',
+    perfiles: [
+      { titulo: 'SMBs and offices', texto: 'Your outsourced IT department: support, Microsoft 365, backups and security.' },
+      { titulo: 'Industry and manufacturing', texto: 'Plant networks, maintenance systems and industrial safety, in one or several countries.' },
+      { titulo: 'Construction and buildings', texto: 'We deliver the building connected, secure and ready to operate.' },
+    ],
+    industrias: 'Experience in manufacturing, transportation and logistics, agribusiness, healthcare, engineering and metalworking, mining, construction and service stations.',
+  },
+  modalidadesLinea: { titulo: 'Engagement models:', items: ['Hourly', 'Per project', '8x5 contract', '24/7 contract'] },
+  cta: {
+    titulo: "What's your operation's biggest challenge today?",
+    texto: "Book a free initial assessment and we'll tell you where to start.",
+    boton: 'Chat on WhatsApp',
+  },
+  trabajamosCon: {
+    titulo: 'We work with',
+    items: ['Microsoft 365', 'Azure', 'AWS', 'Cisco', 'Fortinet', 'MikroTik', 'Dell', 'HPE', 'VMware', 'Veeam', 'Power Platform', 'Linux'],
   },
 } as const;
 

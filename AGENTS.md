@@ -9,7 +9,8 @@ Este repositorio es el sitio web de **FLB Group** (flbcr.com). Lo lees tú, un a
 - Si algo en la tarea es ambiguo o falta información, pregunta en lugar de inventar.
 
 ## Fuentes de verdad (no las modifiques)
-- `docs/contenido-web.md`: **todos los textos** del sitio, en español e inglés. Copia los textos tal cual. No inventes, agregues, resumas ni "mejores" ningún texto. Si un texto no está ahí, no va en el sitio.
+- `docs/propuesta-web-v2.md` + `src/i18n/`: estructura y textos vigentes (v2). `docs/contenido-web.md` queda como referencia de la v1.
+- `docs/contenido-web.md`: textos del sitio, en español e inglés. Copia los textos tal cual. No inventes, agregues, resumas ni "mejores" ningún texto. Si un texto no está ahí, no va en el sitio.
 - `docs/marca.md`: colores, tipografía, logos, tono y reglas visuales.
 
 ## Stack
@@ -24,6 +25,7 @@ Este repositorio es el sitio web de **FLB Group** (flbcr.com). Lo lees tú, un a
 - **Nunca nombres clientes.** Nunca escribas "ALPLA".
 - No uses las frases "un solo responsable" ni "un solo punto de contacto".
 - Los logos están en `public/brand/`. Úsalos tal cual: no los redibujes, recortes, recolorees ni generes nuevos.
+- **Imágenes decorativas** (fondos, texturas): solo cuando una tarea lo pida explícitamente. Guárdalas en `public/img/`, en WebP optimizado. Nunca personas, logos de marcas ni texto dentro de la imagen.
 - Nada de rastreadores, cookies de terceros, chat widgets ni scripts externos que no pida una tarea.
 - Accesible: contraste AA, textos alternativos, navegación con teclado, `lang` correcto en cada página.
 - Rendimiento: imágenes en WebP con `width`/`height`, carga diferida fuera del primer pantallazo. Meta: Lighthouse ≥ 90 en todo.

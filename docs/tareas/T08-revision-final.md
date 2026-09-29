@@ -1,7 +1,7 @@
 # T08: revisión final (QA)
 No agregues funcionalidades nuevas. Solo revisa y corrige.
 
-1. Compara **cada texto** del sitio (ES y EN) contra `docs/contenido-web.md`. Corrige cualquier diferencia. Lista lo corregido.
+1. Compara **cada texto** del sitio (ES y EN) contra `docs/propuesta-web-v2.md` (estructura v2) y `docs/contenido-web.md` (casos y contacto). Corrige cualquier diferencia. Lista lo corregido.
 2. Busca y elimina: "ALPLA", "un solo responsable", "un solo punto de contacto", precios, fotos de personas, logos de terceros.
 3. Revisa en 360 px, 768 px y 1440 px: nada se desborda ni se corta; sin scroll horizontal.
 4. Accesibilidad: contraste AA, `alt` en imágenes, foco visible, navegación completa con teclado, `lang` correcto.
