@@ -5,40 +5,135 @@ interface Props { lang: string; }
 const { lang } = Astro.props;
 const t = useT(lang);
 
-const colores: Record<string, { bar: string; text: string; bg: string; chip: string }> = {
-  INTELLIGENT: { bar: 'bg-orange', text: 'text-orange-700', bg: 'bg-orange/10', chip: 'border-orange/25 text-orange-700' },
-  CONNECTED: { bar: 'bg-green', text: 'text-green-700', bg: 'bg-green/10', chip: 'border-green/30 text-green-700' },
-  SECURE: { bar: 'bg-teal', text: 'text-teal-700', bg: 'bg-teal/10', chip: 'border-teal/30 text-teal-700' },
+const colores: Record<string, {
+  pill: string; pillBg: string; pillIcon: string;
+  arrow: string; chip: string;
+  borderHover: string; decoColor: string;
+}> = {
+  INTELLIGENT: {
+    pill: 'text-orange-700', pillBg: 'bg-orange/10', pillIcon: 'text-orange-700',
+    arrow: 'text-orange', chip: 'border-orange/25 text-orange-700',
+    borderHover: 'group-hover:border-orange', decoColor: 'text-orange',
+  },
+  CONNECTED: {
+    pill: 'text-green-700', pillBg: 'bg-green/10', pillIcon: 'text-green-700',
+    arrow: 'text-green', chip: 'border-green/30 text-green-700',
+    borderHover: 'group-hover:border-green', decoColor: 'text-green',
+  },
+  SECURE: {
+    pill: 'text-teal-700', pillBg: 'bg-teal/10', pillIcon: 'text-teal-700',
+    arrow: 'text-teal', chip: 'border-teal/30 text-teal-700',
+    borderHover: 'group-hover:border-teal', decoColor: 'text-teal',
+  },
 };
 const iconos: Record<string, string> = {
   INTELLIGENT: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
   CONNECTED: 'M5 12h14M12 5l7 7-7 7',
   SECURE: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
 };
+
+/* Bento layout: which cards are "wide" (span 2 cols in desktop) */
+const bentoPattern = [true, false, false, true, true, false]; // fila1: ancha+normal, fila2: normal+ancha, fila3: ancha+normal
 ---
 
-<section id="servicios" class="bg-white py-20 md:py-28">
-  <div class="mx-auto max-w-6xl px-4 lg:px-8">
+<section id="servicios" class="soluciones-section relative overflow-hidden py-20 md:py-28" style="background-color: var(--color-mist);">
+  {/* Circuit board background pattern */}
+  <svg class="pointer-events-none absolute inset-0 h-full w-full" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="circuit-bg" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+        {/* Horizontal traces */}
+        <line x1="0" y1="30" x2="50" y2="30" stroke="currentColor" stroke-width="0.8" />
+        <line x1="70" y1="30" x2="120" y2="30" stroke="currentColor" stroke-width="0.8" />
+        <line x1="0" y1="90" x2="40" y2="90" stroke="currentColor" stroke-width="0.8" />
+        <line x1="80" y1="90" x2="120" y2="90" stroke="currentColor" stroke-width="0.8" />
+        {/* Vertical traces */}
+        <line x1="60" y1="0" x2="60" y2="25" stroke="currentColor" stroke-width="0.8" />
+        <line x1="60" y1="35" x2="60" y2="85" stroke="currentColor" stroke-width="0.8" />
+        <line x1="60" y1="95" x2="60" y2="120" stroke="currentColor" stroke-width="0.8" />
+        <line x1="30" y1="50" x2="30" y2="70" stroke="currentColor" stroke-width="0.8" />
+        <line x1="90" y1="50" x2="90" y2="70" stroke="currentColor" stroke-width="0.8" />
+        {/* Nodes */}
+        <circle cx="60" cy="30" r="3" fill="currentColor" />
+        <circle cx="60" cy="90" r="3" fill="currentColor" />
+        <circle cx="30" cy="60" r="2.5" fill="currentColor" />
+        <circle cx="90" cy="60" r="2.5" fill="currentColor" />
+        {/* Corner traces */}
+        <path d="M50 30 L50 50 L30 50" fill="none" stroke="currentColor" stroke-width="0.8" />
+        <path d="M70 30 L70 50 L90 50" fill="none" stroke="currentColor" stroke-width="0.8" />
+        <path d="M40 90 L40 70 L30 70" fill="none" stroke="currentColor" stroke-width="0.8" />
+        <path d="M80 90 L80 70 L90 70" fill="none" stroke="currentColor" stroke-width="0.8" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#circuit-bg)" class="text-navy" opacity="0.05" />
+  </svg>
+
+  <div class="relative mx-auto max-w-6xl px-4 lg:px-8">
     <div class="mb-12 text-center md:mb-16">
       <h2 class="mb-4 text-3xl font-bold text-navy md:text-4xl">{t.soluciones.titulo}</h2>
       <p class="mx-auto max-w-2xl text-base text-gray md:text-lg">{t.soluciones.intro}</p>
     </div>
 
-    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {t.soluciones.items.map((item) => {
+    <div class="soluciones-grid grid gap-5">
+      {t.soluciones.items.map((item, idx) => {
         const c = colores[item.pilar];
+        const isWide = bentoPattern[idx] ?? false;
         return (
-          <article class="flex flex-col overflow-hidden rounded-xl bg-white shadow-[0_1px_3px_rgba(0,0,0,0.08),0_4px_12px_rgba(0,0,0,0.04)] transition-shadow duration-300 hover:shadow-[0_4px_12px_rgba(0,0,0,0.1),0_8px_24px_rgba(0,0,0,0.06)]">
-            <div class:list={['h-1.5', c.bar]} />
-            <div class="flex flex-1 flex-col p-6">
-              <div class="mb-4 flex items-center gap-3">
-                <span class:list={['flex h-10 w-10 shrink-0 items-center justify-center rounded-lg', c.bg]}>
-                  <svg class:list={['h-5 w-5', c.text]} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={iconos[item.pilar]} /></svg>
+          <article
+            class:list={[
+              'sol-card group relative flex flex-col overflow-hidden rounded-2xl border border-navy/8 bg-white transition-all duration-300',
+              isWide ? 'sol-card--wide' : '',
+              c.borderHover,
+            ]}
+            tabindex="0"
+          >
+            {/* Decorative circuit trace - bottom right corner */}
+            <svg
+              class:list={['sol-deco pointer-events-none absolute -bottom-2 -right-2 h-28 w-28 transition-opacity duration-300', c.decoColor]}
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 100 100"
+            >
+              <line x1="100" y1="40" x2="60" y2="40" stroke="currentColor" stroke-width="1.5" opacity="0.12" />
+              <line x1="60" y1="40" x2="60" y2="70" stroke="currentColor" stroke-width="1.5" opacity="0.12" />
+              <line x1="60" y1="70" x2="30" y2="70" stroke="currentColor" stroke-width="1.5" opacity="0.12" />
+              <line x1="30" y1="70" x2="30" y2="100" stroke="currentColor" stroke-width="1.5" opacity="0.12" />
+              <line x1="100" y1="75" x2="75" y2="75" stroke="currentColor" stroke-width="1.5" opacity="0.12" />
+              <line x1="75" y1="75" x2="75" y2="100" stroke="currentColor" stroke-width="1.5" opacity="0.12" />
+              <circle cx="60" cy="40" r="3.5" fill="currentColor" opacity="0.12" />
+              <circle cx="60" cy="70" r="3" fill="currentColor" opacity="0.12" />
+              <circle cx="30" cy="70" r="3" fill="currentColor" opacity="0.12" />
+              <circle cx="75" cy="75" r="3.5" fill="currentColor" opacity="0.12" />
+            </svg>
+
+            <div class="sol-card__body flex flex-1 flex-col p-6 lg:p-7">
+              {/* Pill label */}
+              <div class="mb-5">
+                <span class:list={['inline-flex items-center gap-2 rounded-full px-3.5 py-1.5', c.pillBg]}>
+                  <svg class:list={['h-4 w-4', c.pillIcon]} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={iconos[item.pilar]} /></svg>
+                  <span class:list={['text-xs font-semibold uppercase tracking-[0.15em]', c.pill]}>{item.pilar}</span>
                 </span>
-                <span class:list={['text-xs font-semibold uppercase tracking-[0.15em]', c.text]}>{item.pilar}</span>
               </div>
-              <h3 class="mb-2 text-lg font-bold leading-snug text-navy md:text-xl">{item.problema}</h3>
-              <p class="mb-5 text-base text-ink/80">{item.solucion}</p>
+
+              {/* Problem title */}
+              <h3 class="sol-card__problem mb-4 text-xl font-bold leading-snug text-navy md:text-[22px]">
+                {item.problema}
+              </h3>
+
+              {/* Arrow separator */}
+              <div class:list={['mb-4 flex items-center gap-3', c.arrow]}>
+                <div class="h-px flex-1 bg-current opacity-20"></div>
+                <svg class="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+                <div class="h-px flex-1 bg-current opacity-20"></div>
+              </div>
+
+              {/* Solution */}
+              <p class="sol-card__solution mb-6 text-base leading-relaxed text-ink/80 md:text-[17px]">
+                {item.solucion}
+              </p>
+
+              {/* Service chips */}
               <ul class="mt-auto flex flex-wrap gap-2" aria-label={lang === 'es' ? 'Servicios' : 'Services'}>
                 {item.servicios.map((s) => (
                   <li class:list={['rounded-full border bg-white px-3 py-1 text-sm font-medium', c.chip]}>{s}</li>
@@ -56,3 +151,105 @@ const iconos: Record<string, string> = {
     </p>
   </div>
 </section>
+
+<style>
+  /* ── Bento grid ── */
+  .soluciones-grid {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) {
+    .soluciones-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .soluciones-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .sol-card--wide {
+      grid-column: span 2;
+    }
+    /* Wide cards: side-by-side layout for problem + solution */
+    .sol-card--wide .sol-card__body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto 1fr auto;
+      column-gap: 2rem;
+    }
+    /* Pill spans full width */
+    .sol-card--wide .sol-card__body > div:first-child {
+      grid-column: 1 / -1;
+    }
+    /* Problem on the left */
+    .sol-card--wide .sol-card__problem {
+      grid-column: 1;
+      grid-row: 2;
+      font-size: 1.5rem;
+      line-height: 1.3;
+      align-self: center;
+    }
+    /* Arrow separator hidden in wide, replaced by vertical line */
+    .sol-card--wide .sol-card__body > div:nth-child(3) {
+      grid-column: 1 / -1;
+      grid-row: 3;
+      display: none;
+    }
+    /* Solution on the right */
+    .sol-card--wide .sol-card__solution {
+      grid-column: 2;
+      grid-row: 2;
+      align-self: center;
+      margin-bottom: 0;
+      border-left: 2px solid var(--color-navy);
+      padding-left: 1.5rem;
+      opacity: 0.85;
+    }
+    /* Chips span full width */
+    .sol-card--wide .sol-card__body > ul {
+      grid-column: 1 / -1;
+    }
+  }
+
+  /* ── Hover / focus interactions ── */
+  .sol-card {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.03);
+  }
+
+  .sol-card:hover,
+  .sol-card:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08), 0 8px 32px rgba(0,0,0,0.04);
+  }
+
+  .sol-card:focus-visible {
+    outline: 2px solid var(--color-navy);
+    outline-offset: 2px;
+  }
+
+  .sol-card:hover .sol-deco,
+  .sol-card:focus-visible .sol-deco {
+    opacity: 1;
+  }
+  .sol-card:hover .sol-deco line,
+  .sol-card:hover .sol-deco circle,
+  .sol-card:focus-visible .sol-deco line,
+  .sol-card:focus-visible .sol-deco circle {
+    opacity: 0.20;
+  }
+
+  /* ── Respect reduced motion ── */
+  @media (prefers-reduced-motion: reduce) {
+    .sol-card {
+      transition: none;
+    }
+    .sol-card:hover,
+    .sol-card:focus-visible {
+      transform: none;
+    }
+    .sol-deco {
+      transition: none;
+    }
+  }
+</style>
