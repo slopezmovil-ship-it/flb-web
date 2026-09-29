@@ -36,19 +36,19 @@ const navLinks = [
             <span class="font-bold">FLB</span><span class="font-medium"> Group</span>
           </span>
         </div>
-        <p class="text-sm text-white/50">{t.footer.razonSocial}</p>
-        <p class="text-sm font-medium uppercase tracking-[0.15em] text-green/80">{t.footer.eslogan}</p>
+        <p class="text-sm text-white/70">{t.footer.razonSocial}</p>
+        <p class="text-sm font-medium uppercase tracking-[0.15em] text-[#48C78E]">{t.footer.eslogan}</p>
       </div>
 
       <!-- Nav links column -->
       <div class="flex flex-col gap-3">
-        <p class="mb-1 text-sm font-semibold uppercase tracking-wider text-white/40">
+        <p class="mb-1 text-sm font-semibold uppercase tracking-wider text-white/70">
           {lang === 'es' ? 'Menú' : 'Menu'}
         </p>
         {navLinks.map((link) => (
           <a
             href={link.href}
-            class="text-sm text-white/60 transition-colors hover:text-white"
+            class="text-sm text-white/70 transition-colors hover:text-white"
           >
             {link.label}
           </a>
@@ -57,12 +57,12 @@ const navLinks = [
 
       <!-- Language & legal column -->
       <div class="flex flex-col gap-3">
-        <p class="mb-1 text-sm font-semibold uppercase tracking-wider text-white/40">
+        <p class="mb-1 text-sm font-semibold uppercase tracking-wider text-white/70">
           {lang === 'es' ? 'Idioma' : 'Language'}
         </p>
         <a
           href={alternateHref}
-          class="inline-flex w-fit items-center gap-1 rounded-md border border-white/20 px-3 py-1.5 text-sm font-medium text-white/70 transition-colors hover:border-white/40 hover:text-white"
+          class="inline-flex w-fit items-center gap-1 rounded-md border border-white/20 px-3 py-1.5 text-sm font-medium text-white/80 transition-colors hover:border-white/40 hover:text-white"
         >
           {lang === 'es' ? 'English' : 'Español'}
         </a>
@@ -71,12 +71,12 @@ const navLinks = [
 
     <!-- Trabajamos con -->
     <div class="mt-10 border-t border-white/10 pt-8 text-center">
-      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-white/40">{t.trabajamosCon.titulo}</p>
-      <p class="text-sm text-white/60">{t.trabajamosCon.items.join(' · ')}</p>
+      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-white/70">{t.trabajamosCon.titulo}</p>
+      <p class="text-sm text-white/70">{t.trabajamosCon.items.join(' · ')}</p>
     </div>
 
     <!-- Bottom bar -->
-    <div class="mt-10 border-t border-white/10 pt-6 text-center text-sm text-white/40">
+    <div class="mt-10 border-t border-white/10 pt-6 text-center text-sm text-white/70">
       {t.footer.marca} · {t.footer.razonSocial} · {t.footer.eslogan} · {t.footer.copyright}
     </div>
   </div>

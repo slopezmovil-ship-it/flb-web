@@ -17,3 +17,14 @@
   /* Tipografía */
   --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
 }
+
+:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 2px;
+}
+/* En secciones oscuras el foco va en blanco para que se vea */
+#inicio :focus-visible,
+#contacto :focus-visible,
+footer :focus-visible {
+  outline-color: #FFFFFF;
+}
