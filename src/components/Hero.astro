@@ -11,9 +11,30 @@ const t = useT(lang);
 
 <section
   id="inicio"
-  class="relative overflow-hidden bg-gradient-to-br from-navy via-navy to-[#061a3a]"
+  class="relative overflow-hidden bg-navy"
 >
-  <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 md:py-24 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:py-32">
+  <!-- Background Image Layer -->
+  <picture class="absolute inset-0 z-0 h-full w-full">
+    <source media="(max-width: 767px)" srcset="/img/hero-bg-mobile.webp" />
+    <img
+      src="/img/hero-bg.webp"
+      alt=""
+      aria-hidden="true"
+      width="1920"
+      height="1080"
+      fetchpriority="high"
+      loading="eager"
+      class="h-full w-full object-cover object-center"
+    />
+  </picture>
+
+  <!-- Blue Semi-transparent Overlay -->
+  <div
+    class="absolute inset-0 z-10 pointer-events-none"
+    style="background: linear-gradient(to right, rgba(11, 42, 91, 0.92), rgba(11, 42, 91, 0.70));"
+  ></div>
+
+  <div class="relative z-20 mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 md:py-24 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:py-32">
     <!-- Text column -->
     <div class="order-2 text-center lg:order-1 lg:text-left">
       <!-- Headline -->
@@ -64,7 +85,7 @@ const t = useT(lang);
   </div>
 
   <!-- Stats strip -->
-  <div class="border-t border-white/15 bg-white/5">
+  <div class="relative z-20 border-t border-white/15 bg-white/5">
     <div class="mx-auto flex max-w-6xl flex-col items-center divide-y divide-white/15 md:flex-row md:divide-x md:divide-y-0">
       {t.hero.datos.map((dato: string) => (
         <div class="flex w-full items-center justify-center px-6 py-4 md:w-1/4">
