@@ -1,0 +1,244 @@
+---
+import { useT } from '../i18n/index';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const t = useT(lang);
+
+interface ColorConfig {
+  iconBg: string;
+  bulletBg: string;
+  hoverBorder: string;
+  cardClass: string;
+}
+
+const colorConfigs: ColorConfig[] = [
+  // 1. Finanzas: naranja
+  { iconBg: 'bg-orange', bulletBg: 'bg-orange-700', hoverBorder: 'hover:border-orange focus-visible:border-orange', cardClass: 'agente-card--orange' },
+  // 2. Comercial: navy
+  { iconBg: 'bg-navy', bulletBg: 'bg-navy', hoverBorder: 'hover:border-navy focus-visible:border-navy', cardClass: 'agente-card--navy' },
+  // 3. Atención: teal
+  { iconBg: 'bg-teal', bulletBg: 'bg-teal-700', hoverBorder: 'hover:border-teal focus-visible:border-teal', cardClass: 'agente-card--teal' },
+  // 4. Talento: verde
+  { iconBg: 'bg-green', bulletBg: 'bg-green-700', hoverBorder: 'hover:border-green focus-visible:border-green', cardClass: 'agente-card--green' },
+  // 5. Logística: naranja
+  { iconBg: 'bg-orange', bulletBg: 'bg-orange-700', hoverBorder: 'hover:border-orange focus-visible:border-orange', cardClass: 'agente-card--orange' },
+  // 6. Operaciones: navy
+  { iconBg: 'bg-navy', bulletBg: 'bg-navy', hoverBorder: 'hover:border-navy focus-visible:border-navy', cardClass: 'agente-card--navy' },
+  // 7. Seguridad: teal
+  { iconBg: 'bg-teal', bulletBg: 'bg-teal-700', hoverBorder: 'hover:border-teal focus-visible:border-teal', cardClass: 'agente-card--teal' },
+  // 8. TI: verde
+  { iconBg: 'bg-green', bulletBg: 'bg-green-700', hoverBorder: 'hover:border-green focus-visible:border-green', cardClass: 'agente-card--green' },
+  // 9. Ejecutivo: naranja
+  { iconBg: 'bg-orange', bulletBg: 'bg-orange-700', hoverBorder: 'hover:border-orange focus-visible:border-orange', cardClass: 'agente-card--orange' },
+];
+
+const iconSVGs = [
+  // 1. Dinero (Finanzas)
+  '<rect width="20" height="12" x="2" y="6" rx="2" /><circle cx="12" cy="12" r="2" /><path d="M6 12h.01M18 12h.01" />',
+  // 2. Gráfica ascendente (Comercial)
+  '<polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" />',
+  // 3. Globo de chat (Atención)
+  '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />',
+  // 4. Personas (Talento)
+  '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />',
+  // 5. Camión (Logística)
+  '<path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" /><path d="M15 18H9" /><path d="M19 18h2a1 1 0 0 0 1-1v-5l-3-4h-5v10" /><circle cx="7" cy="18" r="2" /><circle cx="17" cy="18" r="2" />',
+  // 6. Engrane (Operaciones)
+  '<path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" /><circle cx="12" cy="12" r="3" />',
+  // 7. Escudo (Seguridad)
+  '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" />',
+  // 8. Monitor (TI)
+  '<rect width="20" height="14" x="2" y="3" rx="2" /><line x1="8" x2="16" y1="21" y2="21" /><line x1="12" x2="12" y1="17" y2="21" />',
+  // 9. Barras (Ejecutivo)
+  '<line x1="18" x2="18" y1="20" y2="4" /><line x1="6" x2="6" y1="20" y2="14" /><line x1="12" x2="12" y1="20" y2="9" />',
+];
+---
+
+<section id="agentes" class="relative bg-white py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-4 lg:px-8">
+    <!-- Encabezado -->
+    <div class="mx-auto mb-12 max-w-[720px] text-center md:mb-16">
+      <div class="mb-4">
+        <span class="inline-block rounded-full bg-orange/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.15em] text-orange-700">
+          {t.agentes.etiqueta}
+        </span>
+      </div>
+      <h2 class="mb-4 text-3xl font-bold leading-tight text-navy md:text-4xl">
+        {t.agentes.titulo}
+      </h2>
+      <p class="text-base leading-relaxed text-gray md:text-lg">
+        {t.agentes.intro}
+      </p>
+    </div>
+
+    <!-- Cómo funciona un agente -->
+    <div class="mb-14 md:mb-16">
+      <h3 class="mb-6 text-center text-lg font-bold text-navy md:text-xl">
+        {t.agentes.pasosTitulo}
+      </h3>
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+        {t.agentes.pasos.map((paso, idx) => (
+          <div class="flex items-start gap-4 rounded-xl border border-navy/5 bg-mist p-5 md:p-6">
+            <span
+              class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-navy text-sm font-bold text-white shadow-xs"
+              aria-hidden="true"
+            >
+              {idx + 1}
+            </span>
+            <div>
+              <h4 class="text-base font-bold text-navy">{paso.titulo}</h4>
+              <p class="mt-1 text-sm leading-relaxed text-ink/80">{paso.texto}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Cuadrícula de 9 agentes -->
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {t.agentes.lista.map((agente, idx) => {
+        const c = colorConfigs[idx];
+        return (
+          <article
+            class:list={[
+              'agente-card group flex flex-col rounded-2xl border border-navy/8 bg-white p-6 transition-all duration-300',
+              c.cardClass,
+              c.hoverBorder,
+            ]}
+            tabindex="0"
+          >
+            <div class="mb-5 flex items-start gap-3.5">
+              <div
+                class:list={[
+                  'flex h-10 w-10 shrink-0 items-center justify-center rounded-[10px] text-white shadow-xs',
+                  c.iconBg,
+                ]}
+              >
+                <svg
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <Fragment set:html={iconSVGs[idx]} />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-[19px] font-bold leading-snug text-navy">
+                  {agente.nombre}
+                </h3>
+                <p class="text-[13px] font-semibold uppercase tracking-wider text-gray">
+                  {agente.area}
+                </p>
+              </div>
+            </div>
+
+            <ul class="flex flex-1 flex-col gap-2.5">
+              {agente.tareas.map((tarea) => (
+                <li class="flex items-start gap-2.5 text-sm leading-relaxed text-ink/80">
+                  <span
+                    class:list={['mt-2 h-1.5 w-1.5 shrink-0 rounded-full', c.bulletBg]}
+                    aria-hidden="true"
+                  />
+                  <span>{tarea.texto}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+        );
+      })}
+    </div>
+
+    <!-- Debajo de la cuadrícula: nota y botones -->
+    <p class="mt-10 text-center text-sm text-gray md:mt-12">
+      {t.agentes.nota}
+    </p>
+
+    <div class="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
+      <a
+        href="/descargas/FLB-Agentes-IA.pdf"
+        download="FLB-Agentes-IA.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-navy px-6 py-3.5 text-center text-base font-semibold text-white shadow-md transition-all hover:bg-navy/90 hover:shadow-lg sm:w-auto"
+      >
+        <svg
+          class="h-5 w-5 shrink-0"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" x2="12" y1="15" y2="3" />
+        </svg>
+        {t.agentes.botonPrincipal}
+      </a>
+      <a
+        href="#contacto"
+        class="inline-flex w-full items-center justify-center gap-2 rounded-lg border-2 border-navy px-6 py-3.5 text-center text-base font-semibold text-navy transition-all hover:bg-navy/5 sm:w-auto"
+      >
+        {t.agentes.botonSecundario}
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .agente-card {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03);
+  }
+
+  .agente-card:hover,
+  .agente-card:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 8px 32px rgba(0, 0, 0, 0.04);
+  }
+
+  .agente-card:focus-visible {
+    outline: 2px solid var(--color-navy);
+    outline-offset: 2px;
+  }
+
+  .agente-card--orange:hover,
+  .agente-card--orange:focus-visible {
+    border-color: var(--color-orange);
+  }
+
+  .agente-card--navy:hover,
+  .agente-card--navy:focus-visible {
+    border-color: var(--color-navy);
+  }
+
+  .agente-card--teal:hover,
+  .agente-card--teal:focus-visible {
+    border-color: var(--color-teal);
+  }
+
+  .agente-card--green:hover,
+  .agente-card--green:focus-visible {
+    border-color: var(--color-green);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .agente-card {
+      transition: none;
+    }
+    .agente-card:hover,
+    .agente-card:focus-visible {
+      transform: none;
+    }
+  }
+</style>

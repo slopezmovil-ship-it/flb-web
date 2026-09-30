@@ -61,9 +61,8 @@ Debajo, en letra pequeña: *Experiencia en manufactura, transporte y logística,
 
 ## 5. Casos de éxito
 **Intro:** Proyectos reales en la región. Por confidencialidad, no mencionamos a nuestros clientes.
-1. **Facturación automática con IA** → ~150 facturas que le tomaban 3 días de trabajo a una persona ahora se procesan solas en ~3 horas, sin intervención manual.
-2. **Sistema de mantenimiento industrial en tablets · 5 países** → Bitácora digital que antes no existía, repuestos comprados a tiempo y mantenimiento preventivo en el momento correcto.
-3. **Expansión regional conectada · 3 países** → Oficinas en Costa Rica, Panamá y Guatemala operando como una sola red, con toda la infraestructura en la nube.
+1. **Sistema de mantenimiento industrial en tablets · 5 países** → Bitácora digital que antes no existía, repuestos comprados a tiempo y mantenimiento preventivo en el momento correcto.
+2. **Expansión regional conectada · 3 países** → Oficinas en Costa Rica, Panamá y Guatemala operando como una sola red, con toda la infraestructura en la nube.
 
 ## 6. Cómo trabajamos
 1. **Diagnóstico:** Entendemos tu operación.

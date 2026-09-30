@@ -2,6 +2,7 @@ const es = {
   // Menú
   menu: {
     servicios: 'Servicios',
+    agentes: 'Agentes IA',
     casos: 'Casos de éxito',
     comoTrabajamos: 'Cómo trabajamos',
     contacto: 'Contacto',
@@ -79,10 +80,6 @@ const es = {
     titulo: 'Casos de éxito',
     intro: 'Proyectos reales en la región. Por confidencialidad, no mencionamos a nuestros clientes.',
     destacados: [
-      {
-        titulo: 'Facturación automática con IA',
-        resultado: '~150 facturas que le tomaban 3 días de trabajo a una persona ahora se procesan solas en ~3 horas, sin intervención manual.',
-      },
       {
         titulo: 'Sistema de mantenimiento industrial en tablets · 5 países',
         resultado: 'Bitácora digital que antes no existía, repuestos comprados a tiempo y mantenimiento preventivo en el momento correcto.',
@@ -240,6 +237,58 @@ const es = {
     ],
     tambienTitulo: 'También:',
     tambien: ['Oficinas inteligentes', 'Análisis de datos', 'Sitio web y presencia digital'],
+  },
+  agentes: {
+    etiqueta: 'AGENTES FLB',
+    titulo: 'Un agente de inteligencia artificial para cada área de tu empresa',
+    intro: 'Menos tareas repetitivas y más tiempo para lo que hace crecer tu negocio. Nuestros agentes trabajan con los sistemas que ya usas.',
+    pasosTitulo: 'Cómo funciona un agente',
+    pasos: [
+      { titulo: 'Lee y entiende', texto: 'Documentos, correos, mensajes y datos de tus sistemas.' },
+      { titulo: 'Decide con tus reglas', texto: 'Aplica los criterios de tu empresa, siempre igual.' },
+      { titulo: 'Ejecuta y avisa', texto: 'Completa la tarea y escala a una persona cuando hace falta.' },
+    ],
+    lista: [
+      { nombre: 'Agente de Finanzas', area: 'Facturación y contabilidad', tareas: [
+        { texto: 'Emite y envía facturas sin digitar' },
+        { texto: 'Gestiona cobros y recordatorios a clientes' },
+        { texto: 'Valida facturas de proveedores y programa pagos' } ] },
+      { nombre: 'Agente Comercial', area: 'Ventas', tareas: [
+        { texto: 'Encuentra empresas objetivo y sus contactos' },
+        { texto: 'Da seguimiento para que ningún prospecto se enfríe' },
+        { texto: 'Prepara cotizaciones y propuestas en minutos' } ] },
+      { nombre: 'Agente de Atención', area: 'Servicio al cliente', tareas: [
+        { texto: 'Responde 24/7 en la web y la mensajería' },
+        { texto: 'Clasifica cada solicitud y la envía al área correcta' },
+        { texto: 'Informa el estado de pedidos sin llamadas' } ] },
+      { nombre: 'Agente de Talento', area: 'Recursos Humanos', tareas: [
+        { texto: 'Filtra hojas de vida y agenda entrevistas' },
+        { texto: 'Acompaña la inducción de nuevos colaboradores' },
+        { texto: 'Responde dudas sobre vacaciones y políticas' } ] },
+      { nombre: 'Agente de Logística', area: 'Logística y compras', tareas: [
+        { texto: 'Pronostica la demanda y alerta el reabastecimiento' },
+        { texto: 'Compara cotizaciones y genera órdenes de compra' },
+        { texto: 'Da seguimiento a envíos y alerta retrasos' } ] },
+      { nombre: 'Agente de Operaciones', area: 'Operaciones y mantenimiento', tareas: [
+        { texto: 'Asigna órdenes de trabajo con fotos y bitácora' },
+        { texto: 'Anticipa fallas antes de que la máquina se detenga' },
+        { texto: 'Genera los reportes de producción del día' } ] },
+      { nombre: 'Agente de Seguridad', area: 'Salud ocupacional', tareas: [
+        { texto: 'Controla químicos y hojas de seguridad' },
+        { texto: 'Guía el bloqueo y etiquetado en tablet' },
+        { texto: 'Recibe reportes de incidentes con foto o voz' } ] },
+      { nombre: 'Agente de TI', area: 'Tecnología', tareas: [
+        { texto: 'Resuelve solicitudes comunes de soporte' },
+        { texto: 'Crea y retira cuentas y permisos' },
+        { texto: 'Prioriza las alertas que importan' } ] },
+      { nombre: 'Agente Ejecutivo', area: 'Gerencia', tareas: [
+        { texto: 'Responde preguntas sobre tus datos' },
+        { texto: 'Envía un resumen ejecutivo semanal' },
+        { texto: 'Encuentra información en contratos y documentos' } ] },
+    ],
+    nota: 'Cada agente se implementa por separado; empieza por el que más te duele.',
+    botonPrincipal: 'Descargar catálogo (PDF)',
+    botonSecundario: '¿Cuál agente te conviene? Escríbenos',
   },
   paraQuien: {
     titulo: 'Para quién trabajamos',

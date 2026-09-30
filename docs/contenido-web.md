@@ -69,13 +69,10 @@ Cableado estructurado · Oficinas inteligentes · Análisis de datos · Sitio we
 ## 3. Casos de éxito
 **Intro:** Proyectos reales en la región. Por confidencialidad, no mencionamos a nuestros clientes.
 
-1. **Facturación automática con IA**
-   **Resultado:** ~150 facturas que le tomaban 3 días de trabajo a una persona ahora se procesan solas en ~3 horas, sin intervención manual.
-
-2. **Sistema de mantenimiento industrial en tablets** · 5 países
+1. **Sistema de mantenimiento industrial en tablets** · 5 países
    **Resultado:** bitácora digital que antes no existía, repuestos comprados a tiempo y mantenimiento preventivo en el momento correcto.
 
-3. **Expansión regional conectada** · 3 países
+2. **Expansión regional conectada** · 3 países
    **Resultado:** oficinas en Costa Rica, Panamá y Guatemala operando como una sola red, con toda la infraestructura en la nube.
 
 **Otros proyectos**
@@ -180,13 +177,10 @@ Structured cabling · Smart offices · Data analytics · Websites and digital pr
 ## 3. Success stories
 **Intro:** Real projects across the region. For confidentiality, we do not name our clients.
 
-1. **AI-powered automatic invoicing**
-   **Result:** ~150 invoices that took one person 3 days of work are now processed automatically in ~3 hours, with no manual intervention.
-
-2. **Industrial maintenance system on tablets** · 5 countries
+1. **Industrial maintenance system on tablets** · 5 countries
    **Result:** a digital maintenance log that didn't exist before, spare parts bought on time and preventive maintenance at the right moment.
 
-3. **Connected regional expansion** · 3 countries
+2. **Connected regional expansion** · 3 countries
    **Result:** offices in Costa Rica, Panama and Guatemala operating as a single network, with all infrastructure in the cloud.
 
 **Other projects**

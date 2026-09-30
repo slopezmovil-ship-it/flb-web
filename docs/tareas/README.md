@@ -20,3 +20,4 @@ Después de cada tarea: revisa el resultado con `npm run dev`, y si está bien, 
 | T10 | Rediseño de tarjetas "¿Qué necesita tu operación?" (Claude Opus) |
 | T08 | Revisión final (Gemini), **al final, después de T09 y T10** |
 | T11 | Sistema de fondos y animación en la portada (Claude Opus) |
+| T12 | Sección "Agentes FLB" (IA por área) + descarga del catálogo PDF (Claude Opus) |

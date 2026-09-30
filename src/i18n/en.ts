@@ -2,6 +2,7 @@ const en = {
   // Menu
   menu: {
     servicios: 'Services',
+    agentes: 'AI Agents',
     casos: 'Success stories',
     comoTrabajamos: 'How we work',
     contacto: 'Contact',
@@ -79,10 +80,6 @@ const en = {
     titulo: 'Success stories',
     intro: 'Real projects across the region. For confidentiality, we do not name our clients.',
     destacados: [
-      {
-        titulo: 'AI-powered automatic invoicing',
-        resultado: '~150 invoices that took one person 3 days of work are now processed automatically in ~3 hours, with no manual intervention.',
-      },
       {
         titulo: 'Industrial maintenance system on tablets · 5 countries',
         resultado: 'A digital maintenance log that didn\'t exist before, spare parts bought on time and preventive maintenance at the right moment.',
@@ -240,6 +237,58 @@ const en = {
     ],
     tambienTitulo: 'Also:',
     tambien: ['Smart offices', 'Data analytics', 'Websites and digital presence'],
+  },
+  agentes: {
+    etiqueta: 'FLB AGENTS',
+    titulo: 'An artificial intelligence agent for every area of your business',
+    intro: 'Fewer repetitive tasks, more time for what grows your business. Our agents work with the systems you already use.',
+    pasosTitulo: 'How an agent works',
+    pasos: [
+      { titulo: 'Reads and understands', texto: 'Documents, emails, messages and data from your systems.' },
+      { titulo: 'Decides with your rules', texto: 'Applies your company’s criteria, every time.' },
+      { titulo: 'Acts and notifies', texto: 'Completes the task and escalates to a person when needed.' },
+    ],
+    lista: [
+      { nombre: 'Finance Agent', area: 'Billing and accounting', tareas: [
+        { texto: 'Issues and sends invoices with no manual entry' },
+        { texto: 'Manages collections and customer reminders' },
+        { texto: 'Validates supplier invoices and schedules payments' } ] },
+      { nombre: 'Sales Agent', area: 'Sales', tareas: [
+        { texto: 'Finds target companies and their contacts' },
+        { texto: 'Follows up so no lead goes cold' },
+        { texto: 'Prepares quotes and proposals in minutes' } ] },
+      { nombre: 'Customer Service Agent', area: 'Customer service', tareas: [
+        { texto: 'Answers 24/7 on your website and messaging' },
+        { texto: 'Classifies each request and routes it to the right team' },
+        { texto: 'Reports order status without phone calls' } ] },
+      { nombre: 'Talent Agent', area: 'Human resources', tareas: [
+        { texto: 'Screens résumés and schedules interviews' },
+        { texto: 'Supports new-hire onboarding' },
+        { texto: 'Answers questions about time off and policies' } ] },
+      { nombre: 'Logistics Agent', area: 'Logistics and purchasing', tareas: [
+        { texto: 'Forecasts demand and flags restocking' },
+        { texto: 'Compares supplier quotes and creates purchase orders' },
+        { texto: 'Tracks shipments and alerts on delays' } ] },
+      { nombre: 'Operations Agent', area: 'Operations and maintenance', tareas: [
+        { texto: 'Assigns work orders with photos and a digital log' },
+        { texto: 'Anticipates failures before machines stop' },
+        { texto: 'Generates daily production reports' } ] },
+      { nombre: 'Safety Agent', area: 'Occupational health', tareas: [
+        { texto: 'Controls chemicals and safety data sheets' },
+        { texto: 'Guides lockout/tagout on tablets' },
+        { texto: 'Receives incident reports by photo or voice' } ] },
+      { nombre: 'IT Agent', area: 'Technology', tareas: [
+        { texto: 'Resolves common support requests' },
+        { texto: 'Creates and removes accounts and permissions' },
+        { texto: 'Prioritizes the alerts that matter' } ] },
+      { nombre: 'Executive Agent', area: 'Management', tareas: [
+        { texto: 'Answers questions about your data' },
+        { texto: 'Sends a weekly executive summary' },
+        { texto: 'Finds information in contracts and documents' } ] },
+    ],
+    nota: 'Each agent is deployed separately; start with the one that hurts most.',
+    botonPrincipal: 'Download catalog (PDF)',
+    botonSecundario: 'Which agent fits you? Talk to us',
   },
   paraQuien: {
     titulo: 'Who we work with',
