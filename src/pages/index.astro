@@ -6,6 +6,7 @@ import Soluciones from '../components/Soluciones.astro';
 import ParaQuien from '../components/ParaQuien.astro';
 import Casos from '../components/Casos.astro';
 import ComoTrabajamos from '../components/ComoTrabajamos.astro';
+import TechBackground from '../components/TechBackground.astro';
 import CTA from '../components/CTA.astro';
 import Contacto from '../components/Contacto.astro';
 import Footer from '../components/Footer.astro';
@@ -23,8 +24,11 @@ const t = useT(lang);
   <ParaQuien lang={lang} />
   <Casos lang={lang} />
   <ComoTrabajamos lang={lang} />
-  <CTA lang={lang} />
-  <Contacto lang={lang} />
+  <TechBackground>
+    <CTA lang={lang} />
+    <div class="border-t border-white/10"></div>
+    <Contacto lang={lang} />
+  </TechBackground>
   <Footer lang={lang} />
   <WhatsAppButton lang={lang} />
 </Base>

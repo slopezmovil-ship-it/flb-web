@@ -19,3 +19,4 @@ Después de cada tarea: revisa el resultado con `npm run dev`, y si está bien, 
 | T09 | Imagen de fondo en la portada (Gemini) |
 | T10 | Rediseño de tarjetas "¿Qué necesita tu operación?" (Claude Opus) |
 | T08 | Revisión final (Gemini), **al final, después de T09 y T10** |
+| T11 | Sistema de fondos y animación en la portada (Claude Opus) |
