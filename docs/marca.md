@@ -54,4 +54,4 @@ Para texto de acento pequeño usa las versiones oscuras: orange-700 #A34F1C (5.7
 ## Contacto (para botones y enlaces)
 - WhatsApp: +506 8991-7668 → `https://wa.me/50689917668`
 - Correo: steven.lopez@flbcr.com
-- LinkedIn: https://www.linkedin.com/in/steven-l%C3%B3pez-755245247
+- LinkedIn: https://www.linkedin.com/in/steven-lopez-flb

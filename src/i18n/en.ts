@@ -183,7 +183,7 @@ const en = {
     texto: 'Tell us what you need and we\'ll get back to you with an initial assessment.',
     whatsapp: '+506 8991-7668',
     correo: 'steven.lopez@flbcr.com',
-    linkedin: 'linkedin.com/in/steven-lópez-755245247',
+    linkedin: 'linkedin.com/in/steven-lopez-flb',
     ubicacion: 'Heredia, Costa Rica · Serving Central America',
     etiquetas: {
       whatsapp: 'WhatsApp',

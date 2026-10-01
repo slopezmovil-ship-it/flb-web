@@ -183,7 +183,7 @@ const es = {
     texto: 'Cuéntanos qué necesitas y te respondemos con un diagnóstico inicial.',
     whatsapp: '+506 8991-7668',
     correo: 'steven.lopez@flbcr.com',
-    linkedin: 'linkedin.com/in/steven-lópez-755245247',
+    linkedin: 'linkedin.com/in/steven-lopez-flb',
     ubicacion: 'Heredia, Costa Rica · Servicio en Centroamérica',
     etiquetas: {
       whatsapp: 'WhatsApp',

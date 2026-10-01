@@ -116,7 +116,7 @@ Microsoft 365 · Azure · AWS · Entra ID / Active Directory · Intune · Defend
 **Texto:** Cuéntanos qué necesitas y te respondemos con un diagnóstico inicial.
 - WhatsApp: +506 8991-7668
 - Correo: steven.lopez@flbcr.com
-- LinkedIn: linkedin.com/in/steven-lópez-755245247
+- LinkedIn: linkedin.com/in/steven-lopez-flb
 - Ubicación: Heredia, Costa Rica · Servicio en Centroamérica
 **Formulario:** Nombre · Empresa · Correo · Teléfono (opcional) · ¿En qué te podemos ayudar? · [Enviar]
 **Confirmación:** Gracias. Te contactaremos pronto.
@@ -223,7 +223,7 @@ Microsoft 365 · Azure · AWS · Entra ID / Active Directory · Intune · Defend
 **Text:** Tell us what you need and we'll get back to you with an initial assessment.
 - WhatsApp: +506 8991-7668
 - Email: steven.lopez@flbcr.com
-- LinkedIn: linkedin.com/in/steven-lópez-755245247
+- LinkedIn: linkedin.com/in/steven-lopez-flb
 - Location: Heredia, Costa Rica · Serving Central America
 **Form:** Name · Company · Email · Phone (optional) · How can we help? · [Send]
 **Confirmation:** Thank you. We'll be in touch soon.
