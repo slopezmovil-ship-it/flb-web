@@ -26,18 +26,18 @@ const es = {
   // Servicios
   servicios: {
     titulo: 'Qué hacemos',
-    intro: 'De la red a la automatización, un servicio integral.',
+    intro: 'Socio tecnológico integral: de la infraestructura física a la inteligencia artificial.',
     pilares: [
       {
         nombre: 'INTELLIGENT',
         subtitulo: 'Automatización y mejoramiento de procesos repetitivos con herramientas de vanguardia',
         frase: 'Menos trabajo manual, mejores decisiones.',
         items: [
-          'IA aplicada a tus procesos',
-          'Asistentes y agentes de atención',
+          'Agentes de IA por departamento',
           'Automatización de procesos (RPA)',
+          'Inteligencia de negocios (BI) y analítica',
           'Aplicaciones a la medida e integración',
-          'Tableros de decisión (BI)',
+          'IA aplicada a tus procesos',
         ],
       },
       {
@@ -58,7 +58,7 @@ const es = {
         items: [
           'Seguridad de red',
           'Respaldo y recuperación ante desastres',
-          'Seguridad industrial digital',
+          'Seguridad industrial digital (LOTO y químicos)',
           'Seguridad física: videovigilancia y control de acceso',
         ],
       },
@@ -68,7 +68,6 @@ const es = {
       items: [
         'Cableado estructurado',
         'Oficinas inteligentes',
-        'Análisis de datos',
         'Sitio web y presencia digital',
       ],
       nota: 'Los ejecutamos con aliados especializados, bajo nuestra coordinación y responsabilidad.',
@@ -228,15 +227,15 @@ const es = {
     titulo: '¿Qué necesita tu operación?',
     intro: 'Cuéntanos el problema. Nosotros ponemos la solución.',
     items: [
-      { pilar: 'INTELLIGENT', problema: 'Tu equipo pierde horas en tareas repetitivas', solucion: 'Automatizamos facturación, reportes y consultas, con IA donde suma.', servicios: ['Automatización de procesos', 'IA aplicada', 'Asistentes de atención'] },
-      { pilar: 'INTELLIGENT', problema: 'Decides sin datos claros', solucion: 'Tableros con tus indicadores y sistemas a la medida de tu operación.', servicios: ['Tableros de decisión', 'Aplicaciones a la medida'] },
-      { pilar: 'CONNECTED', problema: 'Tu infraestructura se cae y todo se detiene', solucion: 'Redes, servidores y equipos estables en oficinas, plantas y bodegas de varios países.', servicios: ['Redes multisede', 'Servidores y virtualización', 'Cableado estructurado'] },
-      { pilar: 'CONNECTED', problema: 'No tienes quién atienda tu tecnología', solucion: 'Soporte remoto y en sitio, nube y Microsoft 365, por horas o por contrato.', servicios: ['Mesa de ayuda', 'Nube y Microsoft 365'] },
-      { pilar: 'SECURE', problema: 'No sabes si tu información está protegida', solucion: 'Seguridad de red, respaldos y recuperación ante desastres.', servicios: ['Seguridad de red', 'Respaldo y recuperación'] },
-      { pilar: 'SECURE', problema: 'Tu planta o tus instalaciones necesitan control', solucion: 'Seguridad industrial digital, videovigilancia y control de acceso.', servicios: ['Seguridad industrial', 'Videovigilancia', 'Control de acceso'] },
+      { pilar: 'INTELLIGENT', problema: 'Procesos manuales que frenan a tus equipos y generan errores', solucion: 'Automatizamos flujos y ponemos un agente de IA en cada departamento, con menos errores manuales y trazabilidad de cada paso.', servicios: ['Automatización de procesos (RPA)', 'Agentes de IA por departamento', 'IA aplicada a tus procesos'] },
+      { pilar: 'INTELLIGENT', problema: 'Datos dispersos y decisiones a ciegas', solucion: 'Unimos la información de tus sistemas en inteligencia de negocios (BI) en tiempo real, con visibilidad de planta y de operación.', servicios: ['Inteligencia de negocios (BI) y analítica', 'Aplicaciones a la medida e integración'] },
+      { pilar: 'CONNECTED', problema: 'Tu infraestructura se cae y todo se detiene', solucion: 'Redes, servidores y equipos estables en oficinas, plantas y bodegas de varios países, desde el cableado hasta la virtualización.', servicios: ['Redes multisede', 'Servidores y virtualización', 'Cableado estructurado'] },
+      { pilar: 'CONNECTED', problema: 'Tu equipo de TI está saturado, o no tienes departamento de sistemas', solucion: 'Reforzamos a tu equipo interno en proyectos complejos y expansiones, o somos tu área de TI completa. Soporte remoto y en sitio, por horas o por contrato.', servicios: ['Mesa de ayuda', 'Nube y Microsoft 365'] },
+      { pilar: 'SECURE', problema: 'No sabes si tu información y tu operación están protegidas', solucion: 'Seguridad de red, respaldo y recuperación ante desastres, para que tu negocio siga funcionando.', servicios: ['Seguridad de red', 'Respaldo y recuperación'] },
+      { pilar: 'SECURE', problema: 'Tu planta necesita control, trazabilidad y cumplimiento', solucion: 'Seguridad industrial digital (LOTO y químicos), videovigilancia y control de acceso, con registros listos para auditorías.', servicios: ['Seguridad industrial', 'Videovigilancia', 'Control de acceso'] },
     ],
     tambienTitulo: 'También:',
-    tambien: ['Oficinas inteligentes', 'Análisis de datos', 'Sitio web y presencia digital'],
+    tambien: ['Oficinas inteligentes', 'Sitio web y presencia digital'],
   },
   agentes: {
     etiqueta: 'AGENTES FLB',
@@ -293,9 +292,10 @@ const es = {
   paraQuien: {
     titulo: 'Para quién trabajamos',
     perfiles: [
-      { titulo: 'PyMEs y oficinas', texto: 'Tu departamento de TI externo: soporte, Microsoft 365, respaldos y seguridad.' },
-      { titulo: 'Industria y manufactura', texto: 'Redes de planta, sistemas de mantenimiento y seguridad industrial, en uno o varios países.' },
-      { titulo: 'Constructoras y edificios', texto: 'Entregamos el edificio conectado, seguro y listo para operar.' },
+      { titulo: 'Departamentos de TI de empresas medianas y corporativas', texto: 'Brazo ejecutor y consultor especializado para proyectos complejos, expansiones o cuando tu equipo está saturado.' },
+      { titulo: 'PyMEs y oficinas', texto: 'Si no tienes departamento de sistemas, somos tu área de TI completa: soporte, Microsoft 365, respaldos y seguridad.' },
+      { titulo: 'Industria, manufactura y logística', texto: 'Redes de planta, sistemas de mantenimiento y seguridad industrial en uno o varios países, con menos errores manuales y trazabilidad.' },
+      { titulo: 'Empresas que integran tecnología en sus proyectos', texto: 'Sumamos tecnología a tus proyectos de construcción, remodelación o ampliación, para que tu negocio opere conectado y seguro desde el primer día.' },
     ],
     industrias: 'Experiencia en manufactura, transporte y logística, agroindustria, sector médico, ingeniería y metalurgia, minería, construcción y estaciones de servicio.',
   },

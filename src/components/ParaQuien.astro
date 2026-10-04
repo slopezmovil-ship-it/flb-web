@@ -6,6 +6,7 @@ const { lang } = Astro.props;
 const t = useT(lang);
 
 const iconos = [
+  'M5 4h14a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5a1 1 0 011-1zM5 14h14a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4a1 1 0 011-1zM8 7.01V7M8 17.01V17',
   'M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01',
   'M2 20h20M4 20V10l5 3V10l5 3V10l5 3v7M17 6V3h3v10',
   'M3 21h18M6 21V5a2 2 0 012-2h8a2 2 0 012 2v16M10 7h4M10 11h4M10 15h4',
@@ -16,13 +17,13 @@ const iconos = [
   <div class="mx-auto max-w-6xl px-4 lg:px-8">
     <h2 class="mb-12 text-center text-3xl font-bold text-navy md:mb-16 md:text-4xl">{t.paraQuien.titulo}</h2>
 
-    <div class="grid gap-6 md:grid-cols-3">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
       {t.paraQuien.perfiles.map((p, i) => (
-        <article class="rounded-xl bg-white p-7 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
+        <article class="rounded-xl bg-white p-6 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
           <span class="mb-5 flex h-12 w-12 items-center justify-center rounded-lg bg-navy/5">
             <svg class="h-6 w-6 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={iconos[i]} /></svg>
           </span>
-          <h3 class="mb-2 text-xl font-bold text-navy">{p.titulo}</h3>
+          <h3 class="mb-2 text-lg font-bold text-navy">{p.titulo}</h3>
           <p class="text-base text-ink/80">{p.texto}</p>
         </article>
       ))}

@@ -26,18 +26,18 @@ const en = {
   // Services
   servicios: {
     titulo: 'What we do',
-    intro: 'From the network to automation, a full-service partner.',
+    intro: 'Integrated technology partner: from physical infrastructure to artificial intelligence.',
     pilares: [
       {
         nombre: 'INTELLIGENT',
         subtitulo: 'Automation and improvement of repetitive processes with cutting-edge tools',
         frase: 'Less manual work, better decisions.',
         items: [
-          'AI applied to your processes',
-          'Assistants and service agents',
+          'AI agents for every department',
           'Process automation (RPA)',
+          'Business intelligence (BI) and analytics',
           'Custom applications and integration',
-          'Decision dashboards (BI)',
+          'AI applied to your processes',
         ],
       },
       {
@@ -58,7 +58,7 @@ const en = {
         items: [
           'Network security',
           'Backup and disaster recovery',
-          'Digital industrial safety',
+          'Digital industrial safety (LOTO and chemicals)',
           'Physical security: video surveillance and access control',
         ],
       },
@@ -68,7 +68,6 @@ const en = {
       items: [
         'Structured cabling',
         'Smart offices',
-        'Data analytics',
         'Websites and digital presence',
       ],
       nota: 'Delivered with specialized partners, under our coordination and responsibility.',
@@ -228,15 +227,15 @@ const en = {
     titulo: 'What does your operation need?',
     intro: 'Tell us the problem. We bring the solution.',
     items: [
-      { pilar: 'INTELLIGENT', problema: 'Your team loses hours on repetitive tasks', solucion: 'We automate invoicing, reports and lookups, with AI where it adds value.', servicios: ['Process automation', 'Applied AI', 'Service assistants'] },
-      { pilar: 'INTELLIGENT', problema: 'You make decisions without clear data', solucion: 'Dashboards with your key metrics and systems built for your operation.', servicios: ['Decision dashboards', 'Custom applications'] },
-      { pilar: 'CONNECTED', problema: 'Your infrastructure goes down and everything stops', solucion: 'Stable networks, servers and devices across offices, plants and warehouses in several countries.', servicios: ['Multi-site networks', 'Servers and virtualization', 'Structured cabling'] },
-      { pilar: 'CONNECTED', problema: 'No one is taking care of your technology', solucion: 'Remote and on-site support, cloud and Microsoft 365, hourly or under contract.', servicios: ['Help desk', 'Cloud and Microsoft 365'] },
-      { pilar: 'SECURE', problema: "You're not sure your information is protected", solucion: 'Network security, backups and disaster recovery.', servicios: ['Network security', 'Backup and recovery'] },
-      { pilar: 'SECURE', problema: 'Your plant or facilities need control', solucion: 'Digital industrial safety, video surveillance and access control.', servicios: ['Industrial safety', 'Video surveillance', 'Access control'] },
+      { pilar: 'INTELLIGENT', problema: 'Manual processes that slow your teams down and cause errors', solucion: 'We automate workflows and put an AI agent in every department, with fewer manual errors and traceability of every step.', servicios: ['Process automation (RPA)', 'AI agents for every department', 'AI applied to your processes'] },
+      { pilar: 'INTELLIGENT', problema: 'Scattered data and decisions made blind', solucion: 'We bring the information from your systems together in real-time business intelligence (BI), with visibility across your plant and operation.', servicios: ['Business intelligence (BI) and analytics', 'Custom applications and integration'] },
+      { pilar: 'CONNECTED', problema: 'Your infrastructure goes down and everything stops', solucion: 'Stable networks, servers and devices across offices, plants and warehouses in several countries, from cabling to virtualization.', servicios: ['Multi-site networks', 'Servers and virtualization', 'Structured cabling'] },
+      { pilar: 'CONNECTED', problema: 'Your IT team is overloaded, or you have no IT department', solucion: 'We reinforce your in-house team on complex projects and expansions, or act as your full IT department. Remote and on-site support, hourly or under contract.', servicios: ['Help desk', 'Cloud and Microsoft 365'] },
+      { pilar: 'SECURE', problema: "You're not sure your information and operation are protected", solucion: 'Network security, backup and disaster recovery, so your business keeps running.', servicios: ['Network security', 'Backup and recovery'] },
+      { pilar: 'SECURE', problema: 'Your plant needs control, traceability and compliance', solucion: 'Digital industrial safety (LOTO and chemicals), video surveillance and access control, with records ready for audits.', servicios: ['Industrial safety', 'Video surveillance', 'Access control'] },
     ],
     tambienTitulo: 'Also:',
-    tambien: ['Smart offices', 'Data analytics', 'Websites and digital presence'],
+    tambien: ['Smart offices', 'Websites and digital presence'],
   },
   agentes: {
     etiqueta: 'FLB AGENTS',
@@ -293,9 +292,10 @@ const en = {
   paraQuien: {
     titulo: 'Who we work with',
     perfiles: [
-      { titulo: 'SMBs and offices', texto: 'Your outsourced IT department: support, Microsoft 365, backups and security.' },
-      { titulo: 'Industry and manufacturing', texto: 'Plant networks, maintenance systems and industrial safety, in one or several countries.' },
-      { titulo: 'Construction and buildings', texto: 'We deliver the building connected, secure and ready to operate.' },
+      { titulo: 'IT departments of mid-size and large companies', texto: 'A specialized consulting and execution arm for complex projects, expansions, or when your team is stretched thin.' },
+      { titulo: 'SMBs and offices', texto: "If you don't have an IT department, we are your complete IT team: support, Microsoft 365, backups and security." },
+      { titulo: 'Industry, manufacturing and logistics', texto: 'Plant networks, maintenance systems and industrial safety in one or several countries, with fewer manual errors and full traceability.' },
+      { titulo: 'Companies that build technology into their projects', texto: 'We add technology to your construction, remodeling or expansion projects so your business runs connected and secure from day one.' },
     ],
     industrias: 'Experience in manufacturing, transportation and logistics, agribusiness, healthcare, engineering and metalworking, mining, construction and service stations.',
   },
