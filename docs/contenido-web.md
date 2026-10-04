@@ -1,6 +1,7 @@
 # FLB Group: contenido de la web (fuente única de textos)
 
 > ⚠️ **29-sep-2026:** la estructura y los textos de servicios, franja de confianza, "Para quién", modalidades, llamado a la acción y tecnologías ahora siguen `propuesta-web-v2.md` (aprobada). Las secciones Industrias, Alcance regional, Modalidades, Tecnologías y Por qué FLB ya no se muestran como secciones propias.
+> 4-oct-2026: servicios, soluciones y "Para quién" fueron actualizados (T15 a T18). Ver src/i18n/ y docs/propuesta-web-v2.md.
 *Versión 5 · 28-sep-2026 · Estado: ✅ aprobado por Steven (28-sep-2026)*
 *Fuente: Brand Brief y Texto Maestro v2 del Proyecto. Ningún agente inventa, agrega ni cambia textos. Si falta algo, se pide aquí.*
 

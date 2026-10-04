@@ -1,4 +1,6 @@
 # FLB Group: propuesta de reestructura de la web (v2)
+> 4-oct-2026: textos de servicios, soluciones y "Para quién" actualizados por la auditoría de posicionamiento (T15 a T18). La fuente de verdad textual es src/i18n/.
+
 *29-sep-2026 · Estado: ✅ aprobada por Steven e implementada (ES y EN en `src/i18n/`). Esta propuesta reemplaza la estructura de `contenido-web.md`.*
 
 **Objetivo:** que la página hable del **problema del cliente** y no de nuestro currículum.
@@ -13,7 +15,7 @@
 | 1 | Portada | Igual, con un segundo botón hacia el diagnóstico |
 | 2 | Franja de confianza | Absorbe "Industrias", "Alcance regional" y "Por qué FLB" |
 | 3 | Lo que resolvemos | **Nueva.** Reemplaza "Servicios": 6 tarjetas problema → solución |
-| 4 | Para quién trabajamos | **Nueva.** 3 perfiles de cliente |
+| 4 | Para quién trabajamos | **Nueva.** 4 perfiles de cliente |
 | 5 | Casos de éxito | Solo los 3 casos con resultado |
 | 6 | Cómo trabajamos | Absorbe "Modalidades" en una línea |
 | 7 | Llamado a la acción + Contacto | Nueva banda con oferta antes del formulario |
@@ -41,21 +43,22 @@ Cada tarjeta: problema (título, en palabras del cliente) → solución (una lí
 
 | Pilar | Problema (título) | Solución (una línea) | Servicios (etiquetas) |
 |---|---|---|---|
-| INTELLIGENT | Tu equipo pierde horas en tareas repetitivas | Automatizamos facturación, reportes y consultas, con IA donde suma. | Automatización de procesos · IA aplicada · Asistentes de atención |
-| INTELLIGENT | Decides sin datos claros | Tableros con tus indicadores y sistemas a la medida de tu operación. | Tableros de decisión · Aplicaciones a la medida |
-| CONNECTED | Tu infraestructura se cae y todo se detiene | Redes, servidores y equipos estables en oficinas, plantas y bodegas de varios países. | Redes multisede · Servidores y virtualización · Cableado estructurado |
-| CONNECTED | No tienes quién atienda tu tecnología | Soporte remoto y en sitio, nube y Microsoft 365, por horas o por contrato. | Mesa de ayuda · Nube y Microsoft 365 |
-| SECURE | No sabes si tu información está protegida | Seguridad de red, respaldos y recuperación ante desastres. | Seguridad de red · Respaldo y recuperación |
-| SECURE | Tu planta o tus instalaciones necesitan control | Seguridad industrial digital, videovigilancia y control de acceso. | Seguridad industrial · Videovigilancia · Control de acceso |
+| INTELLIGENT | Procesos manuales que frenan a tus equipos y generan errores | Automatizamos flujos y ponemos un agente de IA en cada departamento, con menos errores manuales y trazabilidad de cada paso. | Automatización de procesos (RPA) · Agentes de IA por departamento · IA aplicada a tus procesos |
+| INTELLIGENT | Datos dispersos y decisiones a ciegas | Unimos la información de tus sistemas en inteligencia de negocios (BI) en tiempo real, con visibilidad de planta y de operación. | Inteligencia de negocios (BI) y analítica · Aplicaciones a la medida e integración |
+| CONNECTED | Tu infraestructura se cae y todo se detiene | Redes, servidores y equipos estables en oficinas, plantas y bodegas de varios países, desde el cableado hasta la virtualización. | Redes multisede · Servidores y virtualización · Cableado estructurado |
+| CONNECTED | Tu equipo de TI está saturado, o no tienes departamento de sistemas | Reforzamos a tu equipo interno en proyectos complejos y expansiones, o somos tu área de TI completa. Soporte remoto y en sitio, por horas o por contrato. | Mesa de ayuda · Nube y Microsoft 365 |
+| SECURE | No sabes si tu información y tu operación están protegidas | Seguridad de red, respaldo y recuperación ante desastres, para que tu negocio siga funcionando. | Seguridad de red · Respaldo y recuperación |
+| SECURE | Tu planta necesita control, trazabilidad y cumplimiento | Seguridad industrial digital (LOTO y químicos), videovigilancia y control de acceso, con registros listos para auditorías. | Seguridad industrial · Videovigilancia · Control de acceso |
 
-**También:** Oficinas inteligentes · Análisis de datos · Sitio web y presencia digital
+**También:** Oficinas inteligentes · Sitio web y presencia digital
 
 ## 4. Para quién trabajamos
 | Perfil | Texto |
 |---|---|
-| **PyMEs y oficinas** | Tu departamento de TI externo: soporte, Microsoft 365, respaldos y seguridad. |
-| **Industria y manufactura** | Redes de planta, sistemas de mantenimiento y seguridad industrial, en uno o varios países. |
-| **Constructoras y edificios** | Entregamos el edificio conectado, seguro y listo para operar. |
+| **Departamentos de TI de empresas medianas y corporativas** | Brazo ejecutor y consultor especializado para proyectos complejos, expansiones o cuando tu equipo está saturado. |
+| **PyMEs y oficinas** | Si no tienes departamento de sistemas, somos tu área de TI completa: soporte, Microsoft 365, respaldos y seguridad. |
+| **Industria, manufactura y logística** | Redes de planta, sistemas de mantenimiento y seguridad industrial en uno o varios países, con menos errores manuales y trazabilidad. |
+| **Empresas que integran tecnología en sus proyectos** | Sumamos tecnología a tus proyectos de construcción, remodelación o ampliación, para que tu negocio opere conectado y seguro desde el primer día. |
 
 Debajo, en letra pequeña: *Experiencia en manufactura, transporte y logística, agroindustria, sector médico, ingeniería y metalurgia, minería, construcción y estaciones de servicio.*
 

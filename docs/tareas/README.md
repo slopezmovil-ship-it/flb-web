@@ -22,3 +22,8 @@ Después de cada tarea: revisa el resultado con `npm run dev`, y si está bien, 
 | T11 | Sistema de fondos y animación en la portada (Claude Opus) |
 | T12 | Sección "Agentes FLB" (IA por área) + descarga del catálogo PDF (Claude Opus) |
 | T13 | Actualizar el enlace de LinkedIn (cualquier modelo) |
+| T14 | "Para quién": perfil "Empresas que integran tecnología en sus proyectos" (antes "Constructoras y edificios") ✅ hecha por Claude (Cowork) el 2-oct-2026 |
+| T15 | Servicios: socio tecnológico integral (auditoría de posicionamiento, 4-oct-2026) |
+| T16 | "¿Qué necesita tu operación?": dolores reales de TI y operaciones |
+| T17 | "Para quién": 4 perfiles, TI corporativo separado de PyMEs (incluye ajuste de layout) |
+| T18 | Sincronizar `docs/` y verificación final de la auditoría |
