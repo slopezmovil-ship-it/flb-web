@@ -37,14 +37,14 @@
 
 ## 3. Lo que resolvemos
 **Título:** ¿Qué necesita tu operación?
-**Intro:** Cuéntanos el problema. Nosotros ponemos la solución.
+**Intro:** Socio tecnológico integral: de la infraestructura física a la inteligencia artificial.
 
 Cada tarjeta: problema (título, en palabras del cliente) → solución (una línea) → servicios (etiquetas pequeñas). Color según el pilar.
 
 | Pilar | Problema (título) | Solución (una línea) | Servicios (etiquetas) |
 |---|---|---|---|
 | INTELLIGENT | Procesos manuales que frenan a tus equipos y generan errores | Automatizamos flujos y ponemos un agente de IA en cada departamento, con menos errores manuales y trazabilidad de cada paso. | Automatización de procesos (RPA) · Agentes de IA por departamento · IA aplicada a tus procesos |
-| INTELLIGENT | Datos dispersos y decisiones a ciegas | Unimos la información de tus sistemas en inteligencia de negocios (BI) en tiempo real, con visibilidad de planta y de operación. | Inteligencia de negocios (BI) y analítica · Aplicaciones a la medida e integración |
+| INTELLIGENT | Datos dispersos y decisiones a ciegas | Unimos la información de tus sistemas en inteligencia de negocios (BI) en tiempo real, con visibilidad de planta y de operación. | Inteligencia de negocios (BI) · Aplicaciones a la medida |
 | CONNECTED | Tu infraestructura se cae y todo se detiene | Redes, servidores y equipos estables en oficinas, plantas y bodegas de varios países, desde el cableado hasta la virtualización. | Redes multisede · Servidores y virtualización · Cableado estructurado |
 | CONNECTED | Tu equipo de TI está saturado, o no tienes departamento de sistemas | Reforzamos a tu equipo interno en proyectos complejos y expansiones, o somos tu área de TI completa. Soporte remoto y en sitio, por horas o por contrato. | Mesa de ayuda · Nube y Microsoft 365 |
 | SECURE | No sabes si tu información y tu operación están protegidas | Seguridad de red, respaldo y recuperación ante desastres, para que tu negocio siga funcionando. | Seguridad de red · Respaldo y recuperación |

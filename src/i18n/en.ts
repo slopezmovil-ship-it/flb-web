@@ -26,7 +26,7 @@ const en = {
   // Services
   servicios: {
     titulo: 'What we do',
-    intro: 'Integrated technology partner: from physical infrastructure to artificial intelligence.',
+    intro: 'Full-service technology partner: from physical infrastructure to artificial intelligence.',
     pilares: [
       {
         nombre: 'INTELLIGENT',
@@ -225,10 +225,10 @@ const en = {
   // ===== v2: client-focused =====
   soluciones: {
     titulo: 'What does your operation need?',
-    intro: 'Tell us the problem. We bring the solution.',
+    intro: 'Full-service technology partner: from physical infrastructure to artificial intelligence.',
     items: [
       { pilar: 'INTELLIGENT', problema: 'Manual processes that slow your teams down and cause errors', solucion: 'We automate workflows and put an AI agent in every department, with fewer manual errors and traceability of every step.', servicios: ['Process automation (RPA)', 'AI agents for every department', 'AI applied to your processes'] },
-      { pilar: 'INTELLIGENT', problema: 'Scattered data and decisions made blind', solucion: 'We bring the information from your systems together in real-time business intelligence (BI), with visibility across your plant and operation.', servicios: ['Business intelligence (BI) and analytics', 'Custom applications and integration'] },
+      { pilar: 'INTELLIGENT', problema: 'Scattered data and decisions made blind', solucion: 'We bring the information from your systems together in real-time business intelligence (BI), with visibility across your plant and operation.', servicios: ['Business Intelligence (BI)', 'Custom applications'] },
       { pilar: 'CONNECTED', problema: 'Your infrastructure goes down and everything stops', solucion: 'Stable networks, servers and devices across offices, plants and warehouses in several countries, from cabling to virtualization.', servicios: ['Multi-site networks', 'Servers and virtualization', 'Structured cabling'] },
       { pilar: 'CONNECTED', problema: 'Your IT team is overloaded, or you have no IT department', solucion: 'We reinforce your in-house team on complex projects and expansions, or act as your full IT department. Remote and on-site support, hourly or under contract.', servicios: ['Help desk', 'Cloud and Microsoft 365'] },
       { pilar: 'SECURE', problema: "You're not sure your information and operation are protected", solucion: 'Network security, backup and disaster recovery, so your business keeps running.', servicios: ['Network security', 'Backup and recovery'] },

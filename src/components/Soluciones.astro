@@ -40,7 +40,7 @@ const bentoPattern = [true, false, false, true, true, false]; // fila1: ancha+no
   <div class="relative mx-auto max-w-6xl px-4 lg:px-8">
     <div class="mb-12 text-center md:mb-16">
       <h2 class="mb-4 text-3xl font-bold text-navy md:text-4xl">{t.soluciones.titulo}</h2>
-      <p class="mx-auto max-w-2xl text-base text-gray md:text-lg">{t.soluciones.intro}</p>
+      <p class="mx-auto max-w-3xl text-base text-gray md:text-lg">{t.soluciones.intro}</p>
     </div>
 
     <div class="soluciones-grid grid gap-5">
@@ -106,7 +106,7 @@ const bentoPattern = [true, false, false, true, true, false]; // fila1: ancha+no
               {/* Service chips */}
               <ul class="mt-auto flex flex-wrap gap-2" aria-label={lang === 'es' ? 'Servicios' : 'Services'}>
                 {item.servicios.map((s) => (
-                  <li class:list={['rounded-full border bg-white px-3 py-1 text-sm font-medium', c.chip]}>{s}</li>
+                  <li class:list={['whitespace-nowrap rounded-full border bg-white px-3 py-1 text-xs font-medium sm:text-sm', c.chip]}>{s}</li>
                 ))}
               </ul>
             </div>
@@ -145,7 +145,7 @@ const bentoPattern = [true, false, false, true, true, false]; // fila1: ancha+no
     .sol-card--wide .sol-card__body {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
       column-gap: 2rem;
     }
     /* Pill spans full width */
@@ -162,8 +162,6 @@ const bentoPattern = [true, false, false, true, true, false]; // fila1: ancha+no
     }
     /* Arrow separator hidden in wide, replaced by vertical line */
     .sol-card--wide .sol-card__body > div:nth-child(3) {
-      grid-column: 1 / -1;
-      grid-row: 3;
       display: none;
     }
     /* Solution on the right */
@@ -179,6 +177,7 @@ const bentoPattern = [true, false, false, true, true, false]; // fila1: ancha+no
     /* Chips span full width */
     .sol-card--wide .sol-card__body > ul {
       grid-column: 1 / -1;
+      grid-row: 3;
     }
   }
 

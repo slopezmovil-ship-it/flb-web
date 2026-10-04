@@ -27,3 +27,4 @@ Después de cada tarea: revisa el resultado con `npm run dev`, y si está bien, 
 | T16 | "¿Qué necesita tu operación?": dolores reales de TI y operaciones |
 | T17 | "Para quién": 4 perfiles, TI corporativo separado de PyMEs (incluye ajuste de layout) |
 | T18 | Sincronizar `docs/` y verificación final de la auditoría |
+| T19 | Frase "Socio tecnológico integral" visible + etiquetas y huecos de las tarjetas de soluciones (Claude Sonnet) ✅ hecha el 4-oct-2026 |
