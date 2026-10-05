@@ -43,7 +43,6 @@ Servicios · Casos de éxito · Cómo trabajamos · Contacto · [ES | EN]
 
 ### INTELLIGENT · Automatización y mejoramiento de procesos repetitivos con herramientas de vanguardia
 *Menos trabajo manual, mejores decisiones.*
-- IA aplicada a tus procesos
 - Asistentes y agentes de atención
 - Automatización de procesos (RPA)
 - Aplicaciones a la medida e integración
@@ -151,7 +150,6 @@ Services · Success stories · How we work · Contact · [ES | EN]
 
 ### INTELLIGENT · Automation and improvement of repetitive processes with cutting-edge tools
 *Less manual work, better decisions.*
-- AI applied to your processes
 - Assistants and service agents
 - Process automation (RPA)
 - Custom applications and integration

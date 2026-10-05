@@ -28,3 +28,4 @@ Después de cada tarea: revisa el resultado con `npm run dev`, y si está bien, 
 | T17 | "Para quién": 4 perfiles, TI corporativo separado de PyMEs (incluye ajuste de layout) |
 | T18 | Sincronizar `docs/` y verificación final de la auditoría |
 | T19 | Frase "Socio tecnológico integral" visible + etiquetas y huecos de las tarjetas de soluciones (Claude Sonnet) ✅ hecha el 4-oct-2026 |
+| T20 | Tarjetas anchas de soluciones sin huecos (bento 3:2), "departamento" en Agentes FLB y chip "IA aplicada a tus procesos" eliminado (Claude Sonnet) ✅ hecha el 4-oct-2026 |

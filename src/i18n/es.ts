@@ -37,7 +37,6 @@ const es = {
           'Automatización de procesos (RPA)',
           'Inteligencia de negocios (BI) y analítica',
           'Aplicaciones a la medida e integración',
-          'IA aplicada a tus procesos',
         ],
       },
       {
@@ -227,7 +226,7 @@ const es = {
     titulo: '¿Qué necesita tu operación?',
     intro: 'Socio tecnológico integral: de la infraestructura física a la inteligencia artificial.',
     items: [
-      { pilar: 'INTELLIGENT', problema: 'Procesos manuales que frenan a tus equipos y generan errores', solucion: 'Automatizamos flujos y ponemos un agente de IA en cada departamento, con menos errores manuales y trazabilidad de cada paso.', servicios: ['Automatización de procesos (RPA)', 'Agentes de IA por departamento', 'IA aplicada a tus procesos'] },
+      { pilar: 'INTELLIGENT', problema: 'Procesos manuales que frenan a tus equipos y generan errores', solucion: 'Automatizamos flujos y ponemos un agente de IA en cada departamento, con menos errores manuales y trazabilidad de cada paso.', servicios: ['Automatización de procesos (RPA)', 'Agentes de IA por departamento'] },
       { pilar: 'INTELLIGENT', problema: 'Datos dispersos y decisiones a ciegas', solucion: 'Unimos la información de tus sistemas en inteligencia de negocios (BI) en tiempo real, con visibilidad de planta y de operación.', servicios: ['Inteligencia de negocios (BI)', 'Aplicaciones a la medida'] },
       { pilar: 'CONNECTED', problema: 'Tu infraestructura se cae y todo se detiene', solucion: 'Redes, servidores y equipos estables en oficinas, plantas y bodegas de varios países, desde el cableado hasta la virtualización.', servicios: ['Redes multisede', 'Servidores y virtualización', 'Cableado estructurado'] },
       { pilar: 'CONNECTED', problema: 'Tu equipo de TI está saturado, o no tienes departamento de sistemas', solucion: 'Reforzamos a tu equipo interno en proyectos complejos y expansiones, o somos tu área de TI completa. Soporte remoto y en sitio, por horas o por contrato.', servicios: ['Mesa de ayuda', 'Nube y Microsoft 365'] },
@@ -239,7 +238,7 @@ const es = {
   },
   agentes: {
     etiqueta: 'AGENTES FLB',
-    titulo: 'Un agente de inteligencia artificial para cada área de tu empresa',
+    titulo: 'Un agente de inteligencia artificial para cada departamento de tu empresa',
     intro: 'Menos tareas repetitivas y más tiempo para lo que hace crecer tu negocio. Nuestros agentes trabajan con los sistemas que ya usas.',
     pasosTitulo: 'Cómo funciona un agente',
     pasos: [
@@ -258,7 +257,7 @@ const es = {
         { texto: 'Prepara cotizaciones y propuestas en minutos' } ] },
       { nombre: 'Agente de Atención', area: 'Servicio al cliente', tareas: [
         { texto: 'Responde 24/7 en la web y la mensajería' },
-        { texto: 'Clasifica cada solicitud y la envía al área correcta' },
+        { texto: 'Clasifica cada solicitud y la envía al departamento correcto' },
         { texto: 'Informa el estado de pedidos sin llamadas' } ] },
       { nombre: 'Agente de Talento', area: 'Recursos Humanos', tareas: [
         { texto: 'Filtra hojas de vida y agenda entrevistas' },

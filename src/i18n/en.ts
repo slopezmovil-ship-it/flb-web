@@ -37,7 +37,6 @@ const en = {
           'Process automation (RPA)',
           'Business intelligence (BI) and analytics',
           'Custom applications and integration',
-          'AI applied to your processes',
         ],
       },
       {
@@ -227,7 +226,7 @@ const en = {
     titulo: 'What does your operation need?',
     intro: 'Full-service technology partner: from physical infrastructure to artificial intelligence.',
     items: [
-      { pilar: 'INTELLIGENT', problema: 'Manual processes that slow your teams down and cause errors', solucion: 'We automate workflows and put an AI agent in every department, with fewer manual errors and traceability of every step.', servicios: ['Process automation (RPA)', 'AI agents for every department', 'AI applied to your processes'] },
+      { pilar: 'INTELLIGENT', problema: 'Manual processes that slow your teams down and cause errors', solucion: 'We automate workflows and put an AI agent in every department, with fewer manual errors and traceability of every step.', servicios: ['Process automation (RPA)', 'AI agents for every department'] },
       { pilar: 'INTELLIGENT', problema: 'Scattered data and decisions made blind', solucion: 'We bring the information from your systems together in real-time business intelligence (BI), with visibility across your plant and operation.', servicios: ['Business Intelligence (BI)', 'Custom applications'] },
       { pilar: 'CONNECTED', problema: 'Your infrastructure goes down and everything stops', solucion: 'Stable networks, servers and devices across offices, plants and warehouses in several countries, from cabling to virtualization.', servicios: ['Multi-site networks', 'Servers and virtualization', 'Structured cabling'] },
       { pilar: 'CONNECTED', problema: 'Your IT team is overloaded, or you have no IT department', solucion: 'We reinforce your in-house team on complex projects and expansions, or act as your full IT department. Remote and on-site support, hourly or under contract.', servicios: ['Help desk', 'Cloud and Microsoft 365'] },
@@ -239,7 +238,7 @@ const en = {
   },
   agentes: {
     etiqueta: 'FLB AGENTS',
-    titulo: 'An artificial intelligence agent for every area of your business',
+    titulo: 'An artificial intelligence agent for every department in your business',
     intro: 'Fewer repetitive tasks, more time for what grows your business. Our agents work with the systems you already use.',
     pasosTitulo: 'How an agent works',
     pasos: [
@@ -258,7 +257,7 @@ const en = {
         { texto: 'Prepares quotes and proposals in minutes' } ] },
       { nombre: 'Customer Service Agent', area: 'Customer service', tareas: [
         { texto: 'Answers 24/7 on your website and messaging' },
-        { texto: 'Classifies each request and routes it to the right team' },
+        { texto: 'Classifies each request and routes it to the right department' },
         { texto: 'Reports order status without phone calls' } ] },
       { nombre: 'Talent Agent', area: 'Human resources', tareas: [
         { texto: 'Screens résumés and schedules interviews' },
